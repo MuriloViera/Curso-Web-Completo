@@ -30,7 +30,7 @@ class Despesa{
 class Bd {
 	//ATRIBUTOS
 	constructor(){
-		var id = localStorage.getItem('id')
+		let id = localStorage.getItem('id')
 
 		if(id === null){
 			localStorage.setItem('id', 0) //Aqui o set item eu to adicionando um item chamado id com o valor de 0
@@ -40,13 +40,13 @@ class Bd {
 
 	//METODOS
 	getProximoId(){
-		var proximoId = localStorage.getItem('id')
+		let proximoId = localStorage.getItem('id')
 		return parseInt(proximoId) + 1
 	}
 
 	gravar(d){
 		
-		var id = this.getProximoId()
+		let id = this.getProximoId()
 
 		localStorage.setItem(id, JSON.stringify(d))//Pra eu alocar algum dado localmente no navegador, tem que ser JSON
 
@@ -55,15 +55,15 @@ class Bd {
 
 	recuperaTodosRegistros(){
 		//array das despesas
-		var despesas = Array()
+		let despesas = Array()
 
-		var id = localStorage.getItem('id')//O getItem('id') ele vai pegar o ultimo item com o nome de id, no caso meu ultimo id inserido
+		let id = localStorage.getItem('id')//O getItem('id') ele vai pegar o ultimo item com o nome de id, no caso meu ultimo id inserido
 
 		//Recuperar todas as despesas em localstorage
 		for(var i = 1; i <= id; i++){
 
 			//Recuperar a despesa
-			var despesa = JSON.parse(localStorage.getItem(i))//Com o get item, eu pego um JSON, pq eu la em cima, to gravando um JSON, e pra usar ele, preiso de um objeto, entao preciso de-converter de JSON para objeto
+			let despesa = JSON.parse(localStorage.getItem(i))//Com o get item, eu pego um JSON, pq eu la em cima, to gravando um JSON, e pra usar ele, preiso de um objeto, entao preciso de-converter de JSON para objeto
 
 
 			//Verificar se existe itens que foram excluidos, e caso exista, vamos pular eles
@@ -71,7 +71,7 @@ class Bd {
 				continue //O continue pula o restante das instruçõe e continua o for
 			}
 
-			despesas.id = i
+			despesa.id = i
 			despesas.push(despesa)//Pego a variavel despesa e coloco ele dentro do array despesas
 		}
 
@@ -79,7 +79,7 @@ class Bd {
 	}
 
 	pesquisar(despesa){//Despesa é o array que o cara coloca nos campos e busca
-		var despesasFiltradas = Array()
+		let despesasFiltradas = Array()
 
 		despesasFiltradas = this.recuperaTodosRegistros()
 
@@ -109,6 +109,10 @@ class Bd {
 		}
 
 		return despesasFiltradas
+	}
+
+	remover(id){
+		localStorage.removeItem(id)
 	}
 }
 
@@ -210,13 +214,17 @@ function carregaListaDespesas(despesas = Array(), filtro = false){
 		linha.insertCell(3).innerHTML = d.valor
 
 		//Criar o botao de exclusao
-		var btn = document.createElement('button')
+		let btn = document.createElement('button')
 		btn.className = 'btn btn-danger'
-		btn.innerHTML = '<i class="fas fa-times"></i>'
+		btn.innerHTML = '<i class="fa fa-times"></i>'
 		btn.id = 'id_despesa_' + d.id
 		btn.onclick = function(){
 			//Remover despesa
-			alert(this)
+			let id = this.id.replace('id_despesa_', '')
+
+			bd.remover(id)
+
+			window.location.reload()
 
 		}
 		linha.insertCell(4).append(btn) 
@@ -227,12 +235,12 @@ function carregaListaDespesas(despesas = Array(), filtro = false){
 }
 
 function pesquisarDespesas(){
-	ano = document.getElementById('ano').value
-	mes = document.getElementById('mes').value
-	dia = document.getElementById('dia').value
-	tipo = document.getElementById('tipo').value
-	descricao = document.getElementById('descricao').value
-	valor = document.getElementById('valor').value
+	let ano = document.getElementById('ano').value
+	let mes = document.getElementById('mes').value
+	let dia = document.getElementById('dia').value
+	let tipo = document.getElementById('tipo').value
+	let descricao = document.getElementById('descricao').value
+	let valor = document.getElementById('valor').value
 
 	var despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
 
