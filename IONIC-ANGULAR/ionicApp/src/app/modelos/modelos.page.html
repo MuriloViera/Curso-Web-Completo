@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modelos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1>Modelos</h1>
+  <ion-item>
+    <ion-label position="floating">Digite sua pesquisa:</ion-label>
+    <ion-input [(ngModel)]="pesquisa" type="text"></ion-input>
+    <!--O ngModel faz o que eu fazia de ir la no modelos.page.ts e criar um atributo de classe, sem que eu precise fazer tudo isso, ele mesmo cria o atributo sem que eu precise ir fazer isso la manualmente-->
+  </ion-item>
+
+  <ion-button (click)="recuperar()">Clique</ion-button>
+
+  <br>
+  {{ resultado }}
+
+</ion-content>

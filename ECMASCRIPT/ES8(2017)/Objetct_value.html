@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Value ECMASCRIPT 8</title>
+
+	<script type="text/javascript">
+		
+		let objeto = {
+			nome: 'Matheus Baixo',
+			profissional: {
+				site:'matheusbaixo.net.br',
+				profissional:'Programador'
+			},
+			hobbies: [
+				{id: 1, hobby: 'Fazer trilhas'},
+				{id: 2, hobby: 'Dormir'},
+			],
+			pais:'Brasil'
+		}
+
+		console.log(objeto)
+
+		//O object Value, faz um objeto, virar um array
+		console.log(Object.values(objeto))
+
+		//Se eu quiser fazer o contrario, converter de uma string, array, para um objeto ou JSON, eu uso **JSON.parse()**
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

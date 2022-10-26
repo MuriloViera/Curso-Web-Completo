@@ -1,0 +1,41 @@
+/*Barra de navegação horizontal*/
+ul  {
+	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 720px;
+	background: #159cb0 url(../imagens2/fundo-horizontal.png) repeat-x;
+	float: left;
+}
+
+ul li{
+	/*display: inline;*/
+	float: left;
+}
+
+ul a{
+	display: block;
+	padding: 0 2em;
+	line-height:  2.2em;/*O line height é pra eu definir o height
+	e fazer com que o que tiver escrito fique no meio*/
+	text-decoration: none;
+	color: #fff;
+	background: url(../imagens2/divisor.png) repeat-y left top;
+}
+
+ul .primeiro a{
+	background: none;
+}
+
+ul a:hover{
+	color: #085662;
+	background: #44cade;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a{
+	color: #085662;
+	background: #44cade;
+}

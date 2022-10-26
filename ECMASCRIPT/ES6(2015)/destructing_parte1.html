@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operador Destructor</title>
+
+	<script type="text/javascript">
+		//Destructuring
+
+		var frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamao']
+
+		//var [ a, b, , c] = frutas //O operador destruturador é o [], nesse caso to destruturando o array frutas e pegando o que ta no indice 0 e passando pra variavel a e o indice 1 na variavel b, to pulando o indice 2 e adicionado o indice 3 ao c
+
+		var [ a, b, c, d, e = 'Banana'] = frutas
+
+		console.log(a, b, c, d, e)
+
+
+		var coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamao'] , ['Maria','Jose']]
+
+		var [ , [ , J]] = coisas //Ali no destructor, como eu tenho um vetor com dois vetores dentro, eu declaro ele como [[][]], eu coloquei uma virgula no primeiro, por que quero pular ele, assim, [ , []], no segundo vetor, quero pular Maria, e recuperar Jose, entao [ , [ , a]]
+
+		console.log(J)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

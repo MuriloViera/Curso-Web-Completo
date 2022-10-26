@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nullish Coalacing Operator</title>
+
+	<script type="text/javascript">
+
+		//Testando com o operador lógico OR
+		let teste1 = null || 'Valor a direita'
+		let teste2 = 0 || 'Valor a direita'
+		let teste3 = undefined || 'Valor a direita'
+		let teste4 = '' || 'Valor a direita'
+		let teste5 = 'Valor a esquerda' || 'Valor a direita'
+
+		//O OR funciona tipo, se o valor da esquerda for válido, ele fica com ele, se não, ele fica com o da direita, se o da esquerda for valido, como por exemplo no teste 5, ele fica com ele e o atribui para a variável
+
+		console.log(teste1);
+		console.log(teste2);
+		console.log(teste3);
+		console.log(teste4);
+		console.log(teste5);
+
+		console.log('-------------------')
+
+		//Testando com o operador lógico nullish coalicing
+		var teste6 = null ?? 'Valor a direita'
+		var teste7 = 0 ?? 'Valor a direita' //Utilizavel
+		var teste8 = undefined ?? 'Valor a direita'
+		var teste9 = '' ?? 'Valor a direita' //Utilizavel
+		var teste0 = 'Valor a esquerda' ?? 'Valor a direita'
+
+		//O Nullish Coalicing funciona tipo, se o valor da esquerda for válido, ele fica com ele, se não, ele fica com o da direita, se o da esquerda for valido, como por exemplo no teste 7,9,0 ele fica com ele e o atribui para a variável
+
+		console.log(teste6);
+		console.log(teste7);
+		console.log(teste8);
+		console.log(teste9);
+		console.log(teste0);
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

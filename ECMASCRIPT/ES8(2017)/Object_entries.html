@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Entries ECMASCRIPT 8</title>
+
+	<script type="text/javascript">
+
+		//Object_entrie converte um objeto para array
+		
+		let objeto = {
+			nome: 'Matheus Baixo',
+			profissional: {
+				site:'matheusbaixo.net.br',
+				profissional:'Programador'
+			},
+			hobbies: [
+				{id: 1, hobby: 'Fazer trilhas'},
+				{id: 2, hobby: 'Dormir'},
+			],
+			pais:'Brasil'
+		}
+
+		console.log(objeto)
+
+		console.log(Object.values(objeto))
+		console.log(Object.entries(objeto))//Tambem converte para array, porem com índices enumerados, fica mais organizado
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

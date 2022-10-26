@@ -1,0 +1,86 @@
+/*Layouts*/
+
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #f2f2f2;
+}
+
+#container{
+	width: 960px; /*Se for umlayoult liquido, ele precisa de porcentagens*/
+	/*85% sendo 720px*/
+	margin: auto;/*O auto centraliza o conteudo*/
+	background: #fff url(../imagens4/coluna2.png) repeat-y left top;
+
+	min-width: 720px;/*largura minima,ou seja, se eu diminuir a pagina, ele nao passa disso*/
+	max-width: 1280px;
+}
+
+#marca{
+	width: 100%;
+	height: 300px;
+	background: #225992 url(../imagens4/cabecalho2.jpg) no-repeat center;
+	text-align: center;
+	line-height: 300px;/*Alinha na vertical o texto baseado na altura que voce quiser, em pixels*/
+}
+
+/*
+#imagem{
+	border: 1px solid red;
+	overflow: hidden; ->Para caso algo na div OVERFLOW(saia) dela, o pedaço que saiu é escondido
+	width: 90%;
+}
+*/
+
+
+#conteudo{
+	width: 75%;/*520px -> 74.28%*/
+	float: right;
+}
+
+#navegacao{
+	width: 23%;/*180px-> 25.71*/
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*background: #d1d1d1;*/ 
+}
+
+
+#conteudo-primario{
+	width: 63%;/*320px-> 64%*/
+	float: left;
+}
+
+img.img-noticia{
+	width: 94%;
+	padding: 2%;
+	max-width: 600px;
+}
+
+#conteudo-secundario{
+	background-color: gray;
+	width: 34%;/*180px -> 36%*/
+	float: right;
+}
+
+#conteudo-secundario h2,
+#conteudo-secundario p{
+	padding-left: 20px; 
+	padding-right: 20px;
+}
+
+#navegacao ul{
+	list-style: none;
+}
+
+#navegacao li a{
+	text-decoration: none;
+	color: blue;
+}
+
+
+#rodape{
+	clear: both;
+	background: #c4c4c4;
+	padding: 5px;
+}

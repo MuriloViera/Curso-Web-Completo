@@ -1,0 +1,1 @@
+Aqui nao tem nada meu rapaz, era pra ter 2 exercicios só, mas um é sobre promisse, que é sobre requisição HTML, e o outro é sobre o await e async denovo que eu pulei do ES8 pq tambem é sobre requisições HTML

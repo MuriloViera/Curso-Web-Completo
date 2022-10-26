@@ -1,0 +1,108 @@
+<!--https://www.youtube.com/watch?v=9zBsdzdE4sM-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Grid-Treinamento</title>
+
+	<!--Aqui eu vou aprender a usar GRID SEM bootstrap, que era o que deveria ter me sido ensinado primeiro-->
+
+	<style type="text/css">
+
+		#grid{
+			display: grid;
+			grid-template-columns:200px 250px ;
+			grid-auto-rows: 100px; 
+			grid-gap: 15px;
+			grid-template-areas:
+				"header header" 
+				"sidebar contente" 
+				"sidebar contente";
+
+			/*****INFORMAÇÕES*****/
+			/*grid-template-columns: 200px 100px;*/
+			/*Quando eu coloco template columns e digito o espaço delas, significa nesse caso, que eu quero que minha grid tenha duas colunas e a primeira coluna tenha 200px de largura e a segunda 100px de largura, caso eu coloque um terceiro item, ele nao vai ficar na primeira linha, pela questao de uma linha ter duas colunas so nesse caso aqui, ai ele joga pra linha de baixo. */
+
+			/*grid-template-columns: 2fr 1fr;*/
+			/*Posso usar px, %, fr, o fr, ele funciona como o grow do flexbox, ele pega o tamanho total da grid, e reparte dependendo do numero no fr, tipo 1fr, 2fr, 3fr, por ai adiante*/ 
+
+			/*grid-template-columns: repeat(3, 100px);*/
+			/*Posso usar tambem o repeat, colocando quantas colunas eu quero, e do lado o tamanho que eu quero que repita para elas*/
+
+			/*Tudo isso funciona igual para o template-row, caso eu queira decidir quantas linhas vai ter o meu grid e o tamanho das linhas, agora, SE eu nao souber quantas linhas eu vou ter, eu posso usar o comando grid-auto-row, e passar somente o tamanho que eu quero que as linhas tenham, nao a quantidade delas, por exemplo: grid-auto-rows: 100px;*/
+
+			/*grid-template-row: repeat(5, 100px);
+			/*Eu ter 5 linhas, nao significa que nao posso passar disso, so significa que se eu tiver mais que 5 linhas, a 6, nao vai ter 100px e vai ter a formatação padrao*/
+
+			/*grid-row-gap: 15px;*/
+			/*Toda linha vai ter um espaçamento entre elas*/
+
+			/*grid-column-gap: 10px;*/
+			/*Vai ter um espaçamento entre todos os itens de uma coluna*/
+
+			/*grid-gap: 15px;*/
+			/*Faz o mesmo das duas funçoes*/
+
+			/*grid-template-areas*/
+			/*O grid template, me deixa definir nomes para as areas, os itens, do meu grid, entao quando eu coloco (grid-template-areas: "header header";) significa que as duas areas(sao duas por que eu declarei duas colunas) na linha que eu tenho, vao ter o nome de header agora, assim, quando eu for la no item, eu posso passar a area que eu quero que esse item ocupe, nesse caso, como as duas areas tem o nome de header, quando eu falo que quero que o item1 ocupe a area do header, ele na realidade vai ocupar as duas areas, fazendo um item grande*/
+			/*O mesmo fica com o sidebar e o contente, quando eu declarar um item, e falar que ele vai ficar nessas areas, ele pega todas as areas com esse nome e junta e fica la*/
+		}
+
+		#grid-item{
+			padding-top: 25px;
+			text-align: center;
+			width: auto;
+			height: auto;
+			background: purple;
+			border: 5px solid black;
+		}
+
+		.item1{
+			grid-area: header;
+		}
+
+		.item2{
+			grid-area: sidebar;
+		}
+
+		.item3{
+			grid-area: contente;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div id="grid">
+		
+		<div id="grid-item" class="item1">
+			Item 1
+		</div>
+
+		<div id="grid-item" class="item2">
+			Item 2
+		</div>
+
+		<div id="grid-item" class="item3">
+			Item 3
+		</div>
+
+		<div id="grid-item">
+			Item 4
+		</div>
+
+		<div id="grid-item">
+			Item 5
+		</div>
+
+		<div id="grid-item">
+			Item 6
+		</div>
+		
+	</div>
+
+</body>
+</html>

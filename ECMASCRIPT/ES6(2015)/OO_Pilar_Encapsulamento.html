@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pilar do Encapsulamento</title>
+
+	<script type="text/javascript">
+
+		//MODELO DO OBJETO
+		class Tv {
+			constructor(){
+				this._relacaoCanais = Array(2, 4, 5, 7, 10)
+				this._canalAtivo = 5
+				this._volume = 5//Se eu colocar um _, teoricamente nao muda nada, mas tem uma convenção do meu pau, que o _ significa private, ou seja, so posso recuperar o com gettter e setters
+			}
+
+			//Getter e Setters
+			get canalAtivo(){
+				return this._canalAtivo //O get é pra eu poder usar uma variavel privada
+			}
+
+			set canalAtivo(canal){
+				if(this._relacaoCanais.indexOf(canal) !== -1){
+					this._canalAtivo = canal//O set é pra eu  poder alterar uma variavel privada
+				}
+			}
+
+		}
+
+
+		var Philips = new Tv()
+
+		Philips.canalAtivo = 10//Aqui nao preciso usar o _ pq o set me deixa usar ela sem ser privada
+
+		console.log(Philips.canalAtivo)
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

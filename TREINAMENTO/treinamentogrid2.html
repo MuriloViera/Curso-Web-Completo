@@ -1,0 +1,113 @@
+<!--https://www.youtube.com/watch?v=9zBsdzdE4sM-->
+
+<!--A diferença desse pro treinamento 1 é que esse nao usa o template areas-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Grid-Treinamento</title>
+
+	<!--Aqui eu vou aprender a usar GRID SEM bootstrap, que era o que deveria ter me sido ensinado primeiro-->
+
+	<style type="text/css">
+
+		#grid{
+			display: grid;
+			grid-template-columns:200px 250px ;
+			grid-auto-rows: 100px; 
+			grid-gap: 15px;
+		}
+
+		#grid-item{
+			padding-top: 25px;
+			text-align: center;
+			width: auto;
+			height: auto;
+			background: red;
+			border: 5px solid black;
+		}
+
+		.item1{
+			grid-column-start: 1;
+			grid-column-end:  3;
+
+			/*Ou 
+				grid-column: 1 / 3;
+			*/
+			
+		}
+
+		.item2{
+			grid-row-start: 2;
+			grid-row-end:  4;
+			
+		}
+
+		.item3{
+			
+		}
+
+		.item5{
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+
+		.item6{
+			grid-row-start: 5;
+			grid-row-end: 6;
+		}
+
+		.item7{
+			grid-row-start: 4;
+			grid-row-end: 6;
+		}
+
+		/*O grid-column-start, significa que eu quero que esse item em especifico começe na coluna 1*/
+
+		/*O grid-column-end, significa que eu quero que esse item em especifico termine no fim da coluna 2, ou seja, coloco o numero 3, por que a coluna 1 vai do numero 1 a 2, e a segunda coluna vai do numero 2 a 3*/
+
+		/*Se eu colocar -1, ele expande a coluna te o tamanho total*/
+
+		/*O grid-row-start ou grid-row-end funcionam da mesma forma que o colum, so que para as linhas*/
+		
+	</style>
+</head>
+<body>
+
+	<div id="grid">
+		
+		<div id="grid-item" class="item1">
+			Item 1
+		</div>
+
+		<div id="grid-item" class="item2">
+			Item 2
+		</div>
+
+		<div id="grid-item" class="item3">
+			Item 3
+		</div>
+
+		<div id="grid-item">
+			Item 4
+		</div>
+
+		<div id="grid-item" class="item5">
+			Item 5
+		</div>
+
+		<div id="grid-item" class="item6">
+			Item 6
+		</div>
+
+		<div id="grid-item" class="item7">
+			Item 7
+		</div>
+		
+	</div>
+
+</body>
+</html>

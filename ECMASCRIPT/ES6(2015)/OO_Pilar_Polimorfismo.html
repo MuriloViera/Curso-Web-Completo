@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pilar da Herança</title>
+
+	<script type="text/javascript">
+		
+
+		//MODELO DE OBJETO ANIMAL(MODELO PAI)
+		class Animal{
+			
+			//ATRIBUTOS
+			constructor(cor, tamanho, peso){
+				this.cor = cor
+				this.tamanho = tamanho
+				this.peso = peso
+			}
+
+			//MÉTODOS
+			dormir(){
+				console.log('Dormir')
+			} 
+
+
+		}
+
+		//MODELO DE OBJETO PASSARO(MODELO FILHO)
+		class Passaro extends Animal{
+
+			//ATRIBUTOS
+			constructor(bico, cor, tamanho, peso){
+				super(cor, tamanho, peso)
+				this.bico = bico
+			}
+
+			//METODOS
+			voar(){
+				console.log('Voar')
+			}
+
+		}
+
+		//MODELO DE OBJETO PAPAGAIO
+		class Papagaio extends Passaro{
+
+			//ATRIBUTOS
+			constructor(sabeFalar, cor, tamanho, peso){
+				super('Médio', cor, tamanho, peso)
+				this.sabeFalar = sabeFalar
+			}
+
+			//MÉTODOS
+			falar(){
+				console.log('Falar')
+			}
+		}
+
+
+		//MODELO DO OBJETO AVESTRUZ
+		class Avestruz extends Passaro{
+
+			//ATRIBUTOS
+			constructor(){
+				super('Grande', 'Branco e preto', 250, 15000)
+			}
+
+			//METODOS
+			enterrarCabeca(){
+				console.log('Enterrar a cabeça')
+			}
+
+			voar(){
+				console.log('Nao voa')
+			}
+		}
+
+
+		var papagaio = new Papagaio(true, 'Verde', 25, 30)
+
+		papagaio.voar()
+
+		var avestruz = new Avestruz()
+		avestruz.enterrarCabeca()
+		avestruz.voar()
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

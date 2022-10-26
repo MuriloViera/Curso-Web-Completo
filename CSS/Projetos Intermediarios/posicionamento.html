@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<title>Posicionamentos (static, relative, absolute e fixed</title>
+
+	<meta charset="utf-8">
+
+	<style type="text/css">
+
+		body{
+			background: #007fc7
+
+		}
+
+		h1{
+			/*position: static; Posicionamento static é o padrao, as coisas aparecem uma a baixo da outra*/
+		}
+
+		p{
+			width: 300px;
+		}
+
+		.relative{
+			border: 1px solid red;
+			position: relative;
+			/*top,bottom,right e left*/
+			top: 20px;/*Assim eu movo ele para essa direção com base no tanto de pixel que eu passei a partir da posição inicial do alvo*/
+			right: 80px;
+		}
+
+		.absolute{
+			border: 1px solid red;
+			position: absolute; /*A posição absoluta ,e tipo um relative,mas, quando algo com o absolute é mexido, os outros ao redor se comportam como se ele nao existisse e seguem seu fluxo sem ele*/
+			top: 0px;
+			background: #f2f2f2;
+			right:20px;
+		}
+
+		.fixed{
+			border: 1px solid red;
+			background: #f2f2f2;
+			position: fixed; /*Um elemento fixed é igual aos outros, mas quando eu rodo a barra lateral ou do lado para andar na página, ele anda junto, nao fica parada*/
+			
+		}
+
+		#conteiner{
+			background: #FFF;
+			width: 800px;
+			margin: 10px auto;/*eu colocar o auto, significa pra ele dimensionar automaticamente a margin ou seja la o que for, conforme o tamanho da pagina web, nesse caso passei 10px para uma margim do topo, e depois uma margin automatica para os lados*/
+			padding: 10px;
+			position: relative;/*O conteiner deve possuir uma relação para que o absolute possa se movimentar baseando-se nele, caso ele nao possua, o elemento absolute se posiciona com base no body TODO*/
+		}
+		
+
+	</style>
+
+	</head>
+
+	<body>
+
+		<div id="conteiner">
+			
+			<h1>Posicionamento</h1>
+
+			<p>
+				P1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+			<p class="fixed">
+				P2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+			<p>
+				P3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+			<p>
+				P3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+			<p>
+				P3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+			<p>
+				P3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+
+
+
+
+
+			
+		</div>
+
+	</body>
+</html>

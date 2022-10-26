@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Flat Map</title>
+
+	<script type="text/javascript">
+		
+		let nomes = [
+			'Jõao, José, Maria',
+			'Sandra , Paulo',
+			'Antônia , Fernanda, Marcos'
+		]//Array multidimensional
+
+		console.log(nomes)
+
+		let nomesMap = nomes.map(function(itens){
+			return itens.split(',')//ele vai separar meu array sempre que ele achar uma virgula
+		})
+
+		console.log(nomesMap)
+
+		let nomesFlatMap = nomes.flatMap(function(itens){
+			return itens.split(',')//ele vai separar meu array sempre que ele achar uma virgula, e vai deixar tudo no mesmo nível
+		})
+
+		console.log(nomesFlatMap)
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

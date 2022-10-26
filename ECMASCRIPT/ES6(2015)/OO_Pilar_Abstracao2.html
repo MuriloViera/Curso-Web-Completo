@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Reflexão</title>
+
+	<script type="text/javascript">
+		//Software de Marcenaria
+
+		/*
+		//Paradigma Procedural
+			
+			//Array de cadeiras
+			var cadeiras = Array()
+
+			cadeiras[0] = Array()
+			cadeiras[0]['qtd_pernas'] = 4
+			cadeiras[0]['giratoria'] = false
+			cadeiras[0]['cor'] = 'azul'
+
+			cadeiras[1] = Array()
+			cadeiras[1]['qtd_pernas'] = 1
+			cadeiras[1]['giratoria'] = true
+			cadeiras[1]['cor'] = 'vermelha'
+
+			function girar_cadeira(indice){
+				if (cadeiras[indice]['giratoria'] === true) {
+					console.log('Girou')
+				}
+				else{
+					console.log('Cadeira nao é giratoria')
+				}
+			}
+
+			function adicionar_cadeira(qtd_pernas, giratoria, cor){
+				var cadeira = Array()
+
+				cadeira['qtd_pernas'] = qtd_pernas
+				cadeira['giratoria'] = giratoria
+				cadeira['cor'] = cor
+
+				cadeiras.push(cadeira)//Pra acidionar essa cadeira no array cadeiras
+			}
+			adicionar_cadeira(3, false, 'verde')
+
+			console.log(cadeiras)
+		*/
+
+
+		//Paradigma Orientado a Objetos
+
+			//Modelo do objeto cadeira
+			class Cadeira{
+
+				//ATRIBUTOS
+				constructor(qtd_pernas, giratoria, cor){
+					this.qtd_pernas = qtd_pernas
+					this.giratoria = giratoria
+					this.cor = cor
+				}
+
+				//MÉTODOS
+				girarCadeira(){
+					if(this.giratoria === true){
+						console.log('Girou')
+					}
+					else{
+						console.log('Cadeira nao giratoria')
+					}
+				}
+			}
+
+			//Modelo do objeto sofa
+			class Sofa{
+
+				//ATRIBUTOS
+				constructor(cor, qtd_lugares, reclinavel){
+					this.cor = cor
+					this.qtd_lugares = qtd_lugares
+					this.reclinavel = reclinavel
+				}
+
+
+				//MÉTODOS
+				reclinar(){
+					if (this.reclinavel === true) {
+						console.log('Reclinavel')
+					}
+					else{
+						console.log('Sofa nao reclinavel')
+					}
+				}
+
+			}
+			
+
+			var cadeiras = Array()
+
+			cadeiras.push(new Cadeira(4, false, 'azul'))
+			cadeiras.push(new Cadeira(1, true, 'vermelho'))
+
+			console.log(cadeiras)
+
+			var sofas = Array()
+
+			sofas.push(new Sofa('preto', 4, true))
+			sofas.push(new Sofa('verde', 5, false))
+
+			console.log(sofas)
+
+	</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

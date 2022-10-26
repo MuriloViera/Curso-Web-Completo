@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Novas tags de input Html5</title>
+
+	<!--Folha de estilo customizado CSS-->
+	<link rel="stylesheet" type="text/css" href="CSS/estilo8.css">
+
+	<!--Folha de estilo para padronizar CSS em todos navegadores-->
+	<link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+
+
+</head>
+
+<body>
+
+	<form>
+
+		<!--Novas tags de input de HTML-->
+		<label for="nome">Nome</label>
+		<input type="text" id="nome"  autofocus> <!--Com o autofocus o input aparece selecionado no que 
+		eu coloquei ele-->
+
+		<label for="email">Email</label>
+		<input type="email" id="email" required> <!--Esse novo tipo de input "email" cria um campo char que se nao tiver
+		um @, ele aparece uma notificação*-->
+		<!--Se eu colocar o required em um input ele nao deixa eu enviar o formulario sem preencher esse campo-->	
+
+		<label for="numero">Número</label>
+		<input type="number" id="numero" min="5" max="10" step="5"> <!--Aqui eu coloco um input de numero, aonde so da pra,
+		colocar numero, com minimo, máximo e de quanto em quanto ele vai quando usa as flechinhas-->
+
+		<label for="url">URL</label>
+		<input type="url" id="url" placeholder="Exemplo: https//wwww.."><!--O Url nao deixa o cara preencher o campo sem ter 
+		colocado um URL-->
+
+		<label for="pesquisa">Pesquisa</label><!--A diferença é que ess daqui tem um x para limpar o campo-->
+		<input type="search" id="pesquisa">
+
+		<label for="range">Range</label>
+		<input type="range" id="range" min="1" max="3" value="2"> <!--Aqui defino quantas posições tem no range, e aonde ele começa
+		-->
+
+		<label for="data">Data</label><!--This is good-->
+		<input type="date" id="data">
+
+		<label for="cor">Cor</label><!--This is good-->
+		<input type="color" id="cor">
+
+		<input type="submit" name="" value="Enviar">
+
+	</form>
+
+</body>
+
+</html>

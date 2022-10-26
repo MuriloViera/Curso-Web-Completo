@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Optional Chaining</title>
+
+	<script type="text/javascript">
+		//O Optional Chaining serve para verificar se um atributo existe dentro de um objeto
+
+		//Orçamento pessoal
+		let obj = {
+			2021: {
+				janeiro: {
+					pessoal: 2880,
+					casa: 1500,
+					investimento: 100
+				},
+				fevereiro: {
+					pessoal : 1800,
+					casa: 1600,
+					investimento : 800
+				}
+			}
+		}
+
+		console.log(obj['2021'].janeiro?.pessoal)//O Optional Chaining é o ?, se existir o objeto, ele me retorna, se nao, ele da undefined
+		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

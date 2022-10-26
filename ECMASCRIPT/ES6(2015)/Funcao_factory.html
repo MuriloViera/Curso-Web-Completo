@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Funções Factory</title>
+
+	<script type="text/javascript">
+		
+		//Fàbrica de modelo de objetos
+		var BicicletaFactory = function(cor, marcha, aro) {
+			return{
+				Cor: cor,
+				Marcha: marcha,
+				Aro: aro,
+				pedalar(){
+					console.log('Método pedalar executado')		
+				}
+
+			} 
+		}
+
+		//Objeto
+		var Bike = BicicletaFactory('Vermelha', '18', 26)
+		var Bikezinha = BicicletaFactory('Verde', 'Única', 15)
+
+		//Debug
+		console.log(Bike)
+		console.log(Bikezinha)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

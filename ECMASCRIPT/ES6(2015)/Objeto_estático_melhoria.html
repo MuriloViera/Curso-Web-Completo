@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Melhorias dos objetos estáticos</title>
+
+	<script type="text/javascript">
+		
+		var nome = 'Jorge'
+		var idade = 29
+		var sexo = 'Masculino'
+		var profissao = 'Programador'
+		
+
+		var objeto = {
+			nome: nome,
+			idade: idade,
+			sexo: sexo,
+			profissao: profissao,
+			exibirResumo: function(){
+				console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+			}
+		}
+
+		console.log(objeto)
+		objeto.exibirResumo()
+
+
+		var objeto2 = {
+			nome, //nome = nome variavel / valor = valor da variavel
+			idade,
+			sexo,
+			profissao,
+			exibirResumo(){
+				console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+			}
+		}
+
+		console.log(objeto2)
+		objeto2.exibirResumo()
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

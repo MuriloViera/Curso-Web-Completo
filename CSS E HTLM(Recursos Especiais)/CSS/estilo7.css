@@ -1,0 +1,38 @@
+/*Transições*/
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: orange;
+	transition: width 3s, background 3s;
+}
+
+#caixa:hover{
+	width: 400px;
+	background: yellow;
+	transition: width 3s, background 3s;/*Aqui o que acontece, eu primeiro falei que quero que ele transicione em horizontal 
+	por 3 segundos até atinginr o estado hover(400px e yellow).Depois, eu falei que quero tambem que o background transicione,
+	ou seja, ele vai mudar de cor do laranja para o amarelo fazendo uma transição de cores e transitando entre cores por 3s*/
+}
+
+
+#caixa2{
+	width: 300px;
+	height: 300px;
+	background: red;
+	transition: width 3s, background 3s;
+}
+
+#caixa2:hover{
+	width: 400px;
+	background: yellow;
+	transition: width 3s, background 3s;
+}
+
+/*Aqui, o que que rola, tenho duas caixas, a primeira caixa no estado NORMAL dela, ela tem uma transição, para transicionar
+em width 300 px em 3s, e transicionar o backgound orange em 3s.BELEZA entao.Depois, eu crio um estado HOVER, pra quando o cara
+passar o mouse, eu transicione para width: 400px em 3s e background yellow em 3s.OU SEJA.Eu tenho duas transições, uma no estado;
+normal, e uma no estado hover, ou seja, quando eu passo o mouse, ele se estica para a nova width de 400, e quando eu tiro o mouse, ele
+volta para o estado normal, e esse estado, tambem tem uma transição para width de 300, OU SEJA, quando passo o mouse ele cresce
+na horizontal, e quando eu tiro o mouse, ele volta para o que era em transição*/
+

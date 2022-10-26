@@ -1,0 +1,30 @@
+/*Herença e especificidade
+#pagina p{
+	color: blue !important; //Caso tenha seletores iguais, ele pega o ultimo.
+	se eu colocar o important, ele coloca que ele é quem tem que ser utilizado
+}
+
+#pagina p{
+	color: red;
+}
+*/
+
+/*Se um seletor for ais específico que o outro
+a regra mais específica será aplicada
+(terá precedência sobre regras mais gerais)*/
+
+*{
+	color: red; /*Seletor geral*/
+}
+
+h2{/*3*/
+	color: blue; /*Seletor especifico*/
+}
+
+h2.verde{/*2*/
+	color: green; /*Seletor mais específico ainda*/
+}
+
+h2#amarelo{/*1*/
+	color: yellow; /*Seletor mais mais especifico*/
+}

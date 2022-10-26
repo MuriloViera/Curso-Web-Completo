@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>JavaScript</title>
+
+	<script>
+		function acao1(){
+			alert('Evento disparado')
+		}
+		
+
+	</script>
+</head>
+<body>
+
+	<!--O onkeypress so funciona se forem teclas que dao saida de um caracter, e nao por exemplo, shift, ou cntrl-->
+
+	<input style="margin-top: 15px; display: block;" onkeydown="acao1()" type="text" placeholder="Onekeydown" >
+
+	<input style="margin-top: 15px; display: block;" onkeyup="acao1()" type="text" placeholder="Onekeyup">
+
+	<input style="margin-top: 15px; display: block;" onkeypress="acao1()" type="text" placeholder="Onkeypress" >
+
+
+
+</body>
+</html>

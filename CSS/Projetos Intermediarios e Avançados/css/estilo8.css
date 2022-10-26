@@ -1,0 +1,39 @@
+/*Estilizando formularios*/
+body{
+	font-family: "Trebuchet MS", Helvetica,sans-serif;
+}
+
+fieldset{
+	margin: 1em 0; /*Lembrando que margin é espaçamento fora e padding é espaçamento dentro*/
+	padding: 1em;
+	border: 1px solid #ccc;
+	background-color: #f8f8f8;
+}
+
+legend{
+	font-weight: bold;
+}
+
+label{
+	display: block;
+	cursor: pointer;
+}
+
+input /*[type="text"]*/{ /*Colocando dentro do colchetes, significa que esse padrao so vai se aplicar aos inputs com a caracteristaca type="text"*/
+	width: 20em;
+}
+
+textarea{
+	width: 20em;
+	height: 10em;
+}
+
+input.radio{
+	width: auto;
+	margin-right: 1em;
+}
+
+input.checkbox, input.submit{
+	width: auto;
+}
+

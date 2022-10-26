@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Objeto Literal/Estático</title>
+
+	<script type="text/javascript">
+		
+		//Modelo de objeto estático
+		class Produto{
+			//Atributos
+			constructor(descricao, preco){
+				this.descricao = descricao
+				this.preco = preco
+			}
+
+			//Métodos
+			verDescricao(){
+				console.log(`${this.descricao} por apenas ${this.preco}`)
+			}
+		}
+
+		var produto = new Produto('Notebook', 2200)
+
+		produto.verDescricao()
+
+
+		//--------------------------------------------------------
+
+		
+		//Criação do produto literal, que é um objeto estático tambem, a diferença, é que eu nao estou usando nenhum modelo para ele, eu to criando ele e apenas ele.
+		var produtoLiteral = {
+			descricao: 'Geladeira',
+			preco: 1800,
+			verDescricao: function(){
+				console.log(`${this.descricao} por apenas ${this.preco}`)
+			}
+		}
+
+		produtoLiteral.verDescricao()
+
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

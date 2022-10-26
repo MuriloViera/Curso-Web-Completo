@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+
+	<script type="text/javascript">
+		
+		var listaFuncionarios = ['Lais', 'Eduardo', 'Fernando', 'Murilo', 'Naoto']
+
+		console.log(listaFuncionarios)
+
+		listaFuncionarios.forEach(function(valor, indice, array){
+			console.log('Indice ' + indice + ' valor ' + valor)
+
+			if(valor == 'Murilo'){
+				array[indice] = 'Scott'
+			}
+
+		})
+
+		console.log(listaFuncionarios)
+
+		//OU posso passar o a função para uma variavel e depois no for each passar a variavel
+
+		var listaCoisas = ['Mesa', 'Cadeira', 'Skate', 'Berimbau', 'Pedra']
+
+		console.log(listaCoisas)
+
+		var f = function(valor, indice, array){
+			console.log(valor, indice)
+		}
+
+		listaCoisas.forEach(f)
+					
+
+	</script>
+		
+</head>
+<body>
+
+</body>
+</html>

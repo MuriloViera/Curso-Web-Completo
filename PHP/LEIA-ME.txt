@@ -1,0 +1,4 @@
+Como o php é uma linguaguem para servidores web, os .php, somente podem ser abertos pelo XAMP, que cria um servidor Apache
+e roda o codigo php, por conta disso, o testador, é o XAMP, e para colocar os arquivos .php em funcionamento no server
+que eu to rodando, tenho que ir no XAMP e clicar em Explorer, e ir na pasta htdocs, la é aonde eu taco os arquivos php para
+testar eles

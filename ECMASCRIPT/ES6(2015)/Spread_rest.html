@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Operador Spread</title>
+
+	<script type="text/javascript">
+		
+		//Contexto Spread
+
+		//String
+		var tituloArtigo = 'Como utilizar o operador Spread/Rest'
+
+		console.log(tituloArtigo)
+		console.log(...tituloArtigo)//Separa letra a letra da string
+		console.log([...tituloArtigo])//Aqui to separando letra a letra e colocando em um vetor
+
+		//Arrays
+		var listaCurso1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular 4']
+		var listaCurso2 = ['Multiplataforma Android/IOS', 'Introdução ao Linux']
+		var listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCurso1, ...listaCurso2]//Aqui eu ESPALHO os outros arrays dentro desse
+
+		console.log(listaCursosCompleto)
+
+		//Objetos
+		var pessoa = {
+			nome:'Joao', idade:27
+		}
+
+		var clone = { 
+			endereco:'Rua Abc', 
+			...pessoa
+		}
+
+		console.log(clone)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

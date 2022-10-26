@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Entries ECMASCRIPT 8</title>
+
+	<script type="text/javascript">
+		
+		let objeto = {
+			nome: 'Matheus Baixo',
+			profissional: {
+				site:'matheusbaixo.net.br',
+				profissional:'Programador'
+			},
+			hobbies: [
+				{id: 1, hobby: 'Fazer trilhas'},
+				{id: 2, hobby: 'Dormir'},
+			],
+			pais:'Brasil'
+		}
+
+		console.log(objeto)
+
+		console.log(Object.values(objeto))
+		console.log(Object.entries(objeto))
+		console.log(Object.getOwnPropertyDescriptors(objeto))//Mostra os descritores do objeto
+
+		//Descritor writable:Quando for definida como false, indica que o valor da propriedadde(atributo) não poderá ser modificada
+
+		Object.defineProperty(objeto, 'nome', {
+			value: 'Eduardo Baixo',
+			writable: false
+		})
+
+		//Descritor enumerable:Quando definido como false, a propriedade em questao não é exibida em laços de repetição(meio bosta)
+
+		//Descritor configurable:Quando definido como false, indica que a propriedade(o atributo), nao pode ser deletada
+
+		Object.defineProperty(objeto, 'pais', {
+			configurable: false
+		})
+
+		console.log(Object.getOwnPropertyDescriptors(objeto))
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

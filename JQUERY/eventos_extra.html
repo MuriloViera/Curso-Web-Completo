@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eventos Extras</title>
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		
+		#div1{
+			width: 80px;
+			height: 80px;
+			border: solid 1px black;
+		}
+
+		.emDestaque{
+			background-color: red;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			//Evento de click do btn2
+			$('#btn2').on('click', function(){
+				alert('BTN 2 Clicado')
+			})
+
+			//Evento do botao 1 que da trigger no evento do botao 2
+			$('#btn1').on('click', function(){
+				$('#btn2').trigger('click')
+			})
+
+			//Hover, o mouse hover substitui eu colocar mouseenter e mouseleve OU mouseover e mouseout, por isso, tenho que por duas funções, uma pra ser executada quando o mouse tiver sobre e uma pra ser executada quando ele sair
+			//O ToggleClass, faz o papel do addClass e removeClass, ele adiciona uma classe, mas se ela ja existir, ele tira ela
+			$('#div1').hover(
+				function(e){
+					$(e.target).toggleClass('emDestaque')
+				})
+
+		})
+
+	</script>
+
+</head>
+<body>
+
+	<button id="btn1" type="button">BTN 1</button>
+	<button id="btn2" type="button">BTN 2</button>
+
+	<hr>
+
+	<div id="div1"></div>
+
+</body>
+</html>

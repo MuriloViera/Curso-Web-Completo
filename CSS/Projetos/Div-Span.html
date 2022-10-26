@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Div e Span</title>
+		<meta charset="utf-8">
+
+		<!--Folha interna-->
+		<style type="text/css"> 
+					
+		#topo{background: blue;}
+		#conteudo{background: red;}
+		#rodape{background: green;}
+		#assinatura{background: pink;
+					font-size: 50px;}
+
+		.produto{background: gray;
+				margin: 10px; }
+
+		.azul{ color: blue; };		
+
+		</style>
+		
+	</head>
+
+	<body>
+		<div id="topo">
+			
+			<img src="Imagens/amazon.png" width="200">
+			<ul>
+				<li>Home</li>
+				<li>Produtos</li>
+				<li>Contatos</li>
+			</ul>
+		</div>
+
+		<div id="conteudo">
+			<div class="produto">
+				Produto 1
+			</div>
+
+			<div class="produto">
+				Produto 2
+			</div>
+			
+			<div class="produto">
+				Produto 3
+			</div>
+		</div>
+
+		<div id="rodape">
+			Todos os <span class="azul">direitos</span> reservados
+		</div>
+
+		<span id="assinatura"> <!--Span agrupa os elementos em linha, já a div agrupa em blocos-->
+			Murilo
+		</span>
+		
+	</body>
+
+</html>

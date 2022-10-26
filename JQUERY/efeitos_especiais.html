@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			button {
+				margin-bottom: 5px;
+				width: 100px;
+			}
+
+			.div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.div1 {
+				background-color: red
+			}
+
+			.div2 {
+				background-color: green
+			}
+
+			.div3 {
+				background-color: blue
+			}
+
+			.grupo {
+				padding: 25px;
+				float: left
+			}
+		</style>
+
+		<!--JQUERY-->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+		
+			$(document).ready(() => {
+
+				//TODOS ESSES EFEITOS SOMEM COM O ELEMENTO, CADA UM DE UMA FORMA
+
+				
+				//ESCONDE E MOSTRA********************************
+
+				//Esconde o elemento(Posso passar a velocidade da animação(slow, medium, fast, ou passar o tempo em milisegundos))
+				//$('#div1').hide('slow')
+
+				//Mostra o elemento
+				//$('#div1').show('fast')
+
+				//Esconde se estiver visivel, e mostra se tiver escondido, faz os dois basicamente
+				$('#btn1').click(function(){
+					$('#div1').toggle('slow')
+				})
+
+
+				//FADE********************************************
+				
+				//Diminui a opacidade ate sumir
+				//$('#div2').fadeOut('slow')
+
+				//Aumenta a opacidade ate ficar nitido
+				//$('#div2').fadeIn('slow')
+
+				//Leva o elemento ate um grau de opacidade especifica baseada em numero de 0 a 1, sendo 0 invisivel, e 1 muito visivel
+				//$('#div2').fadeTo('slow', 0.5)
+
+				//Alterna entre os dois fade
+				$('#btn2').click(function(){
+					$('#div2').fadeToggle('slow')
+				})
+
+
+				//SLIDE********************************************
+
+				//Desliza para cima e some
+				//$('#div3').slideUp('slow')
+
+				//Desliza para baixo e aparece
+				//$('#div3').slideDown('slow')
+
+				//Alterna entre os dois slides
+				$('#btn3').click(function(){
+					$('#div3').slideToggle('slow')
+				})
+
+			})
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div class="grupo">
+			<button id="btn1" type="button">DIV 1</button>
+			<div id="div1" class="div div1"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn2" type="button">DIV 2</button>
+			<div id="div2" class="div div2"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn3" type="button">DIV 3</button>
+			<div id="div3" class="div div3"></div>
+		</div>
+			
+	</body>
+
+</html>

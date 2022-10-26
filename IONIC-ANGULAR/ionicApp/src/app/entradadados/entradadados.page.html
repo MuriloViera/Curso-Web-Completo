@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>entradadados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1>ENTRADA DE DADOS</h1>
+
+  <h4>Configurando a entrada (floating, fixed e stacked)</h4>
+
+  <ion-item >
+    <ion-label position="floating">Seu nome:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label position="fixed">Sua idade:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label position="stacked">Sua regiao:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <h4>Entrada de dados (value, placheholder,clearinput)</h4>
+
+  <ion-item>
+    <ion-label>Seu nome:</ion-label>
+    <ion-input value="Duduzin Combas"></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>Seu telefone:</ion-label>
+    <ion-input placeholder="Insira seu telefone aqui"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Seu usuário:</ion-label>
+    <ion-input clearInput></ion-input>
+  </ion-item>
+
+  <h4>Tipos de entradas (text, number, password, email, tel, url, search)</h4>
+
+  <ion-item>
+    <ion-label>Seu usuário:</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<title>Sequencia de Execuções</title>
+</head>
+<body>
+
+	<!--Se eu tentar selecionar o elemento antes dele ser criado, ele me da um vetor nulo-->
+	<script type="text/javascript">
+
+		$(document).ready(function(){ //Tudo que tiver aqui dentro, so vai ser executado quando a pagina inteira for carregada
+
+			function teste(){
+			console.log($('#exemplo'))
+			}
+
+			teste()
+		})
+
+	</script>
+
+
+	<div id="exemplo">Teste</div>
+	
+</body>
+</html>

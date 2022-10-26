@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1>LISTAS</h1>
+  <ion-list>
+
+    <ion-item>
+       <ion-label>1.Lorem ipsum dolor sit amet</ion-label>
+    </ion-item>
+
+    <ion-item>
+       <ion-label>2.Lorem ipsum dolor sit amet</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <h4>Listas com avatar</h4>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="https://picsum.photos/200"></ion-img>
+      </ion-avatar>
+       <ion-label>1.Famosa Laix</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="https://picsum.photos/200"></ion-img>
+      </ion-avatar>
+       <ion-label>2.Famoso Eduardo</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <h4>Lista Slide</h4>
+  <ion-list>
+
+    <ion-item-sliding>
+
+      <ion-item>
+        <ion-label>Edubardo Cobari</ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option color="success">
+          <ion-icon slot="start" name="create"></ion-icon>
+          Alterar
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="start" name="trash"></ion-icon>
+          Aniquilar
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,30 @@
+/*ANIMAÇÕES*/
+
+@keyframes animacao-caixa{
+	/*Estado inicial*/
+	from{
+		background: red;
+		border-radius: 0px;
+	}
+
+	/*Estado final*/
+	to{
+		background: yellow;
+		border-radius: 300px;
+	}
+
+	/*Aqui no exemplo dele de aula, ele nao vai ensinar muito mais, mas por exemplo, para a animação ter mais de uma
+	etapa, tem como, so ver o estilo5.css que eu brinquei mais com isso e ainda deixei o link para isso*/
+
+}
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: purple; /*Aqui pouco adianta ter background, quando eu colocar animação, ele vai executar a animação e tampar
+	aonde tiver, e depois que a animação acabar que ele volta para o meu background inicial*/
+	animation-name: animacao-caixa;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; /*Aqui eu escolho a a direção da animação, seja from para o to, ou to para from*/ 
+}

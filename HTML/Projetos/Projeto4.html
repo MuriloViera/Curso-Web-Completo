@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Página de Tabelas</title>
+	<meta charset="utf-8">
+
+</head>
+
+<body>
+	<table border="2" width="30%"> <!--Borda de 2 pixels, largura de 30%, significa que idependente do tamanho do site a tabela sempre terá 30% de largura dele-->
+
+		<h2>Produtos</h2>
+
+		<tr> <!--Linha da tabela--> 
+			<th>Código</th><!--Titulo-->
+			<th>Produto</th>
+			<th>Preço</th>
+		</tr>
+
+		<tr><!--Outra linha-->
+			<td>001</td><!--Dado-->
+			<td>Notebook</td>
+			<td>R$2.500</td>
+		</tr>
+		
+
+		<tr><!--Outra linha-->
+			<td>002</td>
+			<td><img src="Imagens/a.jpg" width="20%"></td>
+			<td>R$2.000</td>
+		</tr>
+
+		<tr><!--Outra linha-->
+			<td>003</td>
+			<td><a href="">Clique</a></td>
+			<td>R$500</td>
+		</tr>
+
+		<tr><!--Outra linha-->
+			<td rowspan="2">Desconto</td><!--Faço essa celula ter o tamanho de duas linhas-->
+			<td colspan="2">cupom1 -R$10</td><!--Faço aqui a celula ter o tamanho de duas colunas-->
+		</tr>
+
+		<tr><!--Outra linha-->
+			<td colspan="2">cupom2 -R$12</td>
+		</tr>
+
+		<tr><!--Outra linha-->
+			<td>Total:</td>
+			<td colspan="2">R$3.478,99</td>
+		</tr>
+
+
+	</table>
+
+</body>
+
+</html>

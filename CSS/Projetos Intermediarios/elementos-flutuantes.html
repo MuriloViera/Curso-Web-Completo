@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>elementos Flutuantes</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			
+			#principal{
+				border: 1px solid red;
+				background: green;
+			}
+
+			.conteudo{
+				background: blue;
+				border: 1px solid gray;
+				width: 150px;
+				height: 150px;
+				margin: 10px;
+				float: left;
+			}
+
+			/*
+			.conteudo1{
+				background: red;
+				border: 1px solid gray;
+				width: 150px;
+				height: 150px;
+				margin: 10px;
+				float pode ser left, right ou null
+				float: left; se eu colocar left, ela flutua pra cima do conteudo 2
+			}*/
+
+			.conteudo-zero{
+				background: red;
+				border: 1px solid gray;
+				width: 150px;
+				height: 150px;
+				margin: 10px;
+			}
+
+			.clear{
+				/*clear pode ser left right both none*/
+				clear: both;
+				/*clear limpa o fluxo de coisas flutuantes*/
+			}
+
+			
+
+		</style>
+
+
+	</head>
+
+	<body>
+		<div id="principal"><!--Caso eu use elementos que flutuam dentro de uma div, a div pai fica zoada-->
+
+			<div class="conteudo">
+			Conteudo 1
+			</div>
+
+			<div class="conteudo">
+				Conteudo 2
+			</div>
+
+			<div class="conteudo">
+				Conteudo 3
+			</div>
+
+			<div class="clear">aa</div><!--Para que a div pai nao fiue zoada por ter filhos com elemetos flutuantes, eu tenho que colocar uma outra div filho(que pode sem nada, porem, nela tem que ter um clear, para limpar o fluxo de flutuação)-->
+				
+		</div>
+
+		
+
+		
+		
+
+
+	</body>
+</html>

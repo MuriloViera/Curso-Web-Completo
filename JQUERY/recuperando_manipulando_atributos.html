@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+	<title>Recuperando e Manipulando Atributos</title>
+	
+</head>
+<body>
+
+	<img src="esfera_1.png" border="5px">
+
+	<div style="background-color: red; width: 100px; height: 100px;"></div>
+
+	<input type="text" value="eu sou um input">
+
+
+	<script type="text/javascript">
+		
+		/*Aqui para eu modificar algo que eu recuperei, seria igual o DOM:
+
+		className = class
+		innerHtml = html
+		style = style
+
+		E tem um que é para selecionar o atributo da tag
+
+		attr(<atributo> <valor>)
+		*/
+
+
+		$('img').attr('border', '0px')
+		$('img').attr('src', 'esfera_2.png')
+		$('div').attr('style', 'background-color: green; width: 100px; height: 100px;')
+		$('input').attr('type', 'password')
+
+	</script>
+
+</body>
+</html>

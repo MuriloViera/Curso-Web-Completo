@@ -1,0 +1,39 @@
+/*ANIMAÇÕES*/
+/*https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations*/
+/*https://www.w3schools.com/css/css3_animations.asp*/
+
+@keyframes animacao-caixa{
+	/*Estado inicial*/
+	from{
+		width: 400px;
+		height: 300px;
+		background: url(../imagens/cima.png) top;
+	}
+
+	50%{
+		width: 400px;
+		height: 300px;
+		background: url(../imagens/cimaesquerda.png) top;
+	}
+	
+	/*Estado final*/
+	to{
+		width: 400px;
+		height: 300px;
+		background: url(../imagens/cimaesquerdabaixo.png) top;
+	}
+
+	/*Se eu alternar o top, e colocar sei la, os outros por exemplo, colocar que o from no top, e o to no bot, a imagem vai
+	ir de top para o bot, ver o final da aula de animação que ele explica melhor*/
+
+}
+
+#caixa{
+	width: 400px;
+	height: 300px;
+	background: url(../imagens/cima.png) top; 
+	animation-name: animacao-caixa;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}

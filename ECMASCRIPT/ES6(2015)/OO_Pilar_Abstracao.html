@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Orientação a Objetos</title>
+
+	<script type="text/javascript">
+		
+		//MODELO DE OBJETOS
+		class ContaBancaria {
+
+			//ATRIBUTOS(Caracteristica)
+			constructor(){//Constroi o objeto quando criado com isso que ta dentro dos colchetes
+				this.agencia = 1075
+				this.numeroConta = 8351125
+				this.saldo = 50
+				this.liimite = 450
+			}
+
+			//AÇÕES OU MÉTODOS
+			depositar(valorDeposito){
+				this.saldo += valorDeposito
+			}
+
+			sacar(valorSaque){
+				this.saldo -= valorSaque
+
+			}
+
+			consultarSaldo(){
+				return this.saldo
+			}
+		}
+
+		//Criando os objetos
+		var x = new ContaBancaria()
+		var y = new ContaBancaria()
+
+
+		console.log(x.consultarSaldo())//Acesso o método deste objeto com o .
+		x.depositar(450)
+
+		console.log(x.consultarSaldo())
+
+		x.sacar(200)
+
+		console.log(x.consultarSaldo())
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

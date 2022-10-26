@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<!--JQUERY-->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+		<style type="text/css">
+				
+			.campo {
+				border : none;
+				padding: 10px;
+			}
+
+			.padrao{
+				background-color: #ddd;
+			}
+
+			.erro{
+				background-color: red;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+
+
+				//METODO css
+
+				$('#topo').css('background-color', 'green')//O css é a mesma coisa de style do DOM, eu posso adicionar CSS inline ao elemento que eu adicionei, primeiro eu coloco o que eu quero adicionar e do lado o valor
+
+				//$('#topo').css('margin', '0').css('padding', '10px 20px 10px 20px')
+				//Posso passar um atras do outro
+				//OU
+				$('#topo').css({'margin' : '0', 'padding' : '10px 20px 10px 20px'})
+
+				$('h1').css({'color' : '#fff' , 'margin' : '´0px'})
+
+				//METODO addClass()
+
+				$('input').addClass('campo padrao')//A classe ja deve estar declarada em algum lugar
+
+				$('textarea').addClass('campo erro')//A classe ja deve estar declarada em algum lugar
+
+				//Com o addClass eu posso colocar mais de uma classe
+
+				console.log($('textarea').hasClass('padrao'))//O has class retorna true se tiver a classe, e false se nao tiver
+
+				$('textarea').removeClass('erro')//Remove classe caso ela exista
+
+			})
+			
+		</script>
+
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Barra de navegação da aplicação</h1>
+		</div>
+
+		<div>
+			<h3>Contato</h3>
+			<hr />
+
+			<p>Nome:</p>
+			<input type="text" />
+			<br />
+
+			<p>Email:</p>
+			<input type="text" />
+			<br />
+
+			<p>Mensagem:</p>
+			<textarea></textarea>
+			<br />
+
+			<button type="button">Enviar</button>
+		</div>
+	</body>
+
+</html>

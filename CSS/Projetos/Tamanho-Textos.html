@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Tamanho de Textos</title>
+		<meta charset="utf-8">
+
+		<!--Folha interna-->
+		<style type="text/css"> 
+			/*Medidas de tamanho
+			px -> tamanho fixo
+			% -> tamanho relativo(que aumenta e diminui com base do tamanho da janela)
+			em -> tamanho relativo ao conteiner pai
+			*/
+
+			div{ font-size:60px; }	/*Estabeleço que odas div serao de 60px*/		
+			
+			.texto{
+				font-size: 2em;
+			}
+
+			.texto2{
+				font-size: 15px; 
+			}
+
+		</style>
+		
+
+	</head>
+
+	<body>
+		
+		
+		<div>
+			
+			<p class="texto">Conteúdo1</p><!--Aqui o 2em ta pegando o tamanho do conteiner pai, que no caso é a div de 60px logo como é 2em, o tamanho dele com base no pai será 120px-->
+
+			<p class="texto2">Conteúdo2</p>
+			
+
+		</div>
+
+	</body>
+
+</html>

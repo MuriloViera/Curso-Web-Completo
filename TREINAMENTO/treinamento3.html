@@ -1,0 +1,85 @@
+<!--https://www.youtube.com/watch?v=9zBsdzdE4sM-->
+
+<!--A diferença desse pro treinamento 1 é que esse nao usa o template areas, e usa span, que é o maaaaaais facil-->
+<!--Os 3 treinamentos, ensinam 3 jeitos diferentes de aumentar o tamanho de um item, esse é o mais facil-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Grid-Treinamento</title>
+
+	<!--Aqui eu vou aprender a usar GRID SEM bootstrap, que era o que deveria ter me sido ensinado primeiro-->
+
+	<style type="text/css">
+
+		#grid{
+			border: 1px solid red;
+			display: grid;
+			grid-template-columns:200px 250px ;
+			grid-auto-rows: 100px; 
+			grid-gap: 15px;
+		}
+
+		#grid-item{
+			padding-top: 25px;
+			text-align: center;
+			width: auto;
+			height: auto;
+			background: green;
+			border: 5px solid black;
+		}
+
+		.item1{
+			grid-column: span 2 ; /*To falando que eu quero que esse item expanda para ocupar 2 colunas*/
+			
+		}
+
+		.item2{
+			grid-area: span 2; /*To falando que eu quero que esse item expanda para ocupar 2 linhas*/
+		}
+
+		.item6{
+			grid-area: span 2;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div id="grid">
+		
+		<div id="grid-item" class="item1">
+			Item 1
+		</div>
+
+		<div id="grid-item" class="item2">
+			Item 2
+		</div>
+
+		<div id="grid-item" class="item3">
+			Item 3
+		</div>
+
+		<div id="grid-item">
+			Item 4
+		</div>
+
+		<div id="grid-item" class="item5">
+			Item 5
+		</div>
+
+		<div id="grid-item" class="item6">
+			Item 6
+		</div>
+
+		<div id="grid-item" class="item7">
+			Item 7
+		</div>
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>databinding</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1>DATA BINDING(ligação de dados)</h1>
+
+  <h4>String interpolation</h4>
+
+  <!--Exibir variaveis-->
+  {{2 + 2}} 
+
+  <br>
+
+  <!--Exibir variaveis da pagina databinding.page.ts-->
+  {{titulo}}
+
+  <!--Exibir imagems declaradas como objetos na pagina databinding.page.ts-->
+  <ion-img src="{{imagemRandomica}}"></ion-img>
+
+  <h4>Property Binding</h4>
+
+  <ion-img [src]="imagemLocal"></ion-img>
+
+  <br>
+
+  <h4>Event Binding</h4>
+
+  {{titulo2}}
+  <ion-item>
+    <ion-label position="floating">Seu nome:</ion-label>
+    <ion-input (input)="atualiza()"></ion-input>
+  </ion-item>
+
+  <ion-button [color]="cor" (click)="mudaCor()">Botao</ion-button>
+
+
+</ion-content>

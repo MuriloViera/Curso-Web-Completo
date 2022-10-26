@@ -1,0 +1,32 @@
+header{
+	border: 1px solid red;
+	padding: 10px;
+	background: #f2f2f2;
+}
+
+nav{
+	border: 1px solid red;
+	background: #f2f2f2;
+	padding: 10px;
+
+}
+
+footer{
+	background: #ccc;
+}
+
+article{
+	background: orange;
+}
+
+section{
+	border: 1px dotted #ccc;
+}
+
+aside{
+	background: blue;
+}
+
+form input{
+	display: block;
+}

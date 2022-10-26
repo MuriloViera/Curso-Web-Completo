@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seletores que selecionam elementos</title>
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<h1>Este h1 será mudado de cor</h1>
+
+	<div>Div 1</div>
+	<div>Div 2</div>
+
+	<ul>
+		<li>Menu 1 - Item 1</li>
+		<li>Menu 1 - Item 2</li>
+		<li>Menu 1 - Item 3</li>
+	</ul>
+
+	<ul>
+		<li class="itemMenu2">Menu 2 - Item 1</li>
+		<li class="itemMenu2">Menu 2 - Item 2</li>
+		<li class="itemMenu2">Menu 2 - Item 3</li>
+	</ul>
+
+	<input type="text" placeholder="Campo 1">
+
+	<br>
+
+	<select>
+		<option>-- Selecione uma opção --</option>
+		<option>Opção 1</option>
+		<option>Opção 2</option>
+	</select>
+
+	<br>
+
+	<img id="img" src="https://picsum.photos/200">
+
+	<script type="text/javascript">
+		
+		//O $(), funciona igual o document.get.elementBy..., a diferença, é que é bem mais curto, e eu nao preciso escrever o ByClass, ById,ByTagName, nao, com o Jquery eu so coloco o $() e dentro do parenteses coloco a tag, . antes se for classe antes ou # antes se for id
+
+		//Selecionando por nome da tag
+		console.log($('h1'))
+
+		console.log($('div')) //Aqui eu seleciono TODOS elementos que tiverem uma tag div
+
+		console.log($('li'))
+
+		console.log($('.itemMenu2'))//Pegando todos elementos que tem a classe itemMenu2 
+
+		console.log($('#img'))
+
+	</script>
+
+</body>
+</html>

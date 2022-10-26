@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nullish Assignment Operator</title>
+
+	<script type="text/javascript">
+		//Esse operador, faz um teste prévio se a variavel tem valor null ou undefined, se tiver null ou undefined, ele atribui o valor a variavel, se não, ele descarta
+
+		let v1 = 10
+		let v2 = null //Uma variavel null significa que ela está preenchida com o valor null ou undefined
+
+		//Operador logical nullish assignment
+		v1 ??= 50//Se a variavel v1 for nula, ele atribui o valor 50 a ela, se não, ele nao atribui nada e mantem o valor original dela
+
+		console.log(v1)
+
+		v2 ??= 100
+
+		console.log(v2)
+
+		//-----------------------
+
+		let carro = {
+			marca : 'Volkswagem'
+		}
+
+		carro.marca ??= 'Hyundai'
+		carro.modelo ??= 'Onix'
+
+		console.log(carro)
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

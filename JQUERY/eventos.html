@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			#divExterna{
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+			}
+
+			.inputFocado{
+				background-color: red;
+			}
+		</style>
+
+		<!--JQUERY-->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+		<script>
+
+			//ready = onload(DOM)
+
+			$(document).ready(function(){
+
+				//EVENTOS JANELA**********************************
+
+				$('#onload').html('Página Carregada')
+
+				$(window).scroll(function(){//Aqui eu to pegando a janela, e to pegando o scroll dela, ou seja, quando o scroll da janela rodar, acontece isso
+					$('#scroll').html('Scroll acionado')
+				})
+
+				$(window).resize(function(){
+					$('#resize').html('Página redimensionada').css('background-color', 'red')
+				})
+
+				$('#div1').scroll(function(){//Estou capturando o evento de scroll dessa div
+					$(this).css('background-color', 'blue')//O this significa que to usando o proprio objeto denovo(#div1), ou poderia ter escrito #div1 tb
+				})
+
+				//EVENTO MOUSE************************************
+
+				$('#btn1').mousedown(function(){//onmousedown
+					$('#div2').css('background-color', 'green')
+				})
+
+				/*$('#btn1').mouseup(function(){//onmouseup
+					$('#div2').css('background-color', 'purple')
+				})*/
+
+				//O mais comum é o onclick, que é mt igual ao onmouseup
+				$('#btn1').click(function(){//onclick
+					$('#div2').css('background-color', 'purple')
+				})
+
+				$('#btn2').dblclick(function(){//ondblclick
+					$('#div2').css('background-color', 'orange')
+				})
+
+				//onmouseup ele pega a coordenada daonde o mouse esta(xy)
+				$('#div2').mousemove(function(e){//onmousemove 
+					$('#resultado').html('x:' + e.offsetX + '/ Y:' + e.offsetY)
+				})
+
+				$('#divExterna').mouseover(function(){//onmouseover
+					$('#resultado2').html('Entrou')
+				})
+
+				/*
+				$('#divExterna').mouseenter(function(){//onmouseenter
+					$('#resultado2').html('Entrou')
+				})
+				*/
+
+				$('#divExterna').mouseout(function(){//onmouseover
+					$('#divExterna').css('background-color', 'blue')
+				})
+
+				/*
+				$('#divExterna').mouseleave(function(){//onmouseleave
+					$('#divExterna').css('background-color', 'blue')
+				})
+				*/
+
+				//PARA TERMINAR OS EVENTOS DE MOUSE, mouseover e mouseenter pegam o evento de quando o mouse entra, e mouseout e mouseleave pega quando sai
+
+				//EVENTO TECLADO**********************************
+
+				$('#teclado').keydown(function(e){//onkeydown
+					$('#Resultadotecla').html('Tecla pressionada')
+					console.log(e.keyCode)//O keycode é mt legal pois me retorna o codigo da tecla que eu pressionei, assim posso usar isso futuramente
+				})
+
+				$('#teclado').keyup(function(){//onkeyup
+					$('#Resultadotecla').html('Tecla solta')
+				})
+
+				//EVENTO FORMULARIO*******************************
+
+				//Eu colocar o e, significa que vou querer recuperar esse evento para ser usado dps e nao ter que colocar tudo denovo
+				//E o target, eu to recuperando o mesmo alvo que foi usado no evento
+
+				//Focus é basicamente quando voce clica nele
+				$('#nome, #email').focus(function(e){//onfocus
+					console.log('Esse elemento HTML recebeu foco(nome)')
+					$(e.target).addClass('inputFocado')
+					//OU
+					//$('#nome').addClass('inputFocado')
+				})
+
+				//Eu colocar #nome, #email, significa que estou capturando ao mesmo tempo, o mesmo evento desses dois elementos HTML
+
+				//O blur é perder o foco
+				$('#nome, #email').blur(function(e){//onblur
+					console.log('Esse elemento HTML perdeu o foco(nome)')
+					$(e.target).removeClass('inputFocado')
+				})
+
+
+				//o change captura quando um select muda
+				$('#opcao').change(function(e){//onchange
+					console.log('Opção mudada para ' + $(e.target).val())
+				})
+
+				$('#form').submit(function(e){
+					e.preventDefault()//So coloquei isso aqui para que a pagina nao recarregue apos enviar o formulario, logo, nao envia nenhum dado tambem
+					console.log('Formulário enviado')
+				})
+
+			})
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Eventos</h1>
+		</div>
+
+		<div>
+			<h3>Browser</h3>
+			<span>Onload: </span><span id="onload">?</span><br />
+			<span>Scroll: </span><span id="scroll">?</span><br />
+			<span>Resize Window: </span><span id="resize">?</span>
+			<div id="div1" style="height: 100px; width: 100px;  border: solid 1px; overflow-y: scroll;"><!--O overflow-y diz que caso a div se sobre-saia em Y, adiciona-se um scroll-->
+				<br><br><br><br><br><br><br>
+			</div>
+			<hr />
+
+			<h3>Mouse</h3>
+			<button id="btn1" type="button">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span id="resultado">Resultado do evento sobre a div</span>
+			<div id="divExterna"></div>
+			<span>Div Externa: </span><span id="resultado2"></span>
+			<hr />
+
+			<h3>Teclado</h3>
+			<span>Nome:</span>
+			<input id="teclado" type="text" />
+			<span id="Resultadotecla">Resultado do evento sobre o input</span>
+			<hr />
+
+			<h3>Formulário</h3>
+			<form id="form">
+				<span>Nome:</span>
+				<input id="nome" type="text" />
+
+				<span>E-mail:</span>
+				<input id="email" type="text" />
+
+				<span>Motivo do contato:</span>
+				<select id="opcao">
+					<option value="">-- Selecione --</option>
+					<option value="duvida">Dúvida</option>
+					<option value="sugestao">Sugestão</option>
+				</select>
+				
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,57 @@
+/*
+Modelo de caixa
+
+
+.conteudo{
+	border: 1px solid red;
+	Padding coloca espaço em alguma direçaõ que voce escolher
+
+	padding-top: 20px; 
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+
+	padding: 20px 15px 10px 5px; Mesma função que o de cima, porem, os valores
+	são passados no sentido horario, cima,direita,baixo,esquerda
+
+	padding: 20px; Se eu passar um valor só, ele coloca em todos os lados
+
+	O margin é a mesma coisa do padding, só que ele coloca 
+	espaçamento do lado de fora
+
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+
+	margin: 20px;
+
+	width: 150px;
+}
+
+.conteudo2{
+
+	margin: 50px; Quando eu tenho duas caixas com margens perto uma da outra, a que tem 
+	a margin que ta perto da outra maior, sobrepoe a parte da outra
+	padding: 20px;
+	border: 1px solid red;
+	width: 150px;
+}
+
+Fim do modelo de caixa*/
+
+/*
+Noticia
+*/
+
+#noticia{
+
+	background: #f9f9f9;
+	border: 1px solid gray;
+	padding: 20px;
+}
+
+h2{/*Zerei a margin do h2, por que os h ja vem com uma margem pequena deles*/
+	margin: 0px;
+}

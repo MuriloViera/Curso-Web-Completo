@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+
+	<script type="text/javascript">
+		
+		var lista_frutas = Array()
+
+		lista_frutas[0] = 'Banana'
+		lista_frutas[1] = 'Maça'
+		lista_frutas[2] = 'Morango'
+		lista_frutas[3] = 'Uva'
+
+		var auxiliar = lista_frutas.indexOf('Uva')
+
+		
+		//Se existir ele me retorna a posição do vetor aonde o que eu procurei está, se nao, ele me retorna um -1
+
+		if (auxiliar === -1) {
+			document.write('Documento nao existe')
+		}
+		else{
+			document.write('Elemento existe e está na posição ' + auxiliar)
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

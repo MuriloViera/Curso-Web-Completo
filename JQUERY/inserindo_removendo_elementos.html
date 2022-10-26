@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+	<title>Inserindo e removendo elementos HTML</title>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('#lista1').append('<li>Item 4</li>')//O Append cria e adiciona um elemento dentro no final do elemento que eu selecionei
+			$('#lista1').prepend('<li>Item 0</li>')
+
+			//O after e o before coloca antes ou depois so que nao dentro do elemento, mas fora
+			$('#lista2').after('<p>Eu fui inserido após a div</p>')
+			$('#lista2').before('<p>Eu fui inserido antes a div</p>')
+
+			//$('#lista1').remove()
+				
+		})
+
+	</script>
+</head>
+<body>
+
+	<ul id="lista1">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+
+	<div id="lista2">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+	</div>
+
+	<hr>
+
+</body>
+</html>

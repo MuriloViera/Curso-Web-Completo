@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Prototype</title>
+
+	<script type="text/javascript">
+		
+		//Aviao
+		//Atributos:Cor e modelo
+		//Metodos:Levantar voo
+
+		//Objeto objeto literal
+		var aviao1 = {
+			cor: 'Branco',
+			modelo: 'Aribus a380',
+			levantarVoo: function(){
+				console.log('Levantar voo')
+			}
+		}
+
+		//-------------------------------------------------------
+
+		//Função construtora de modelo objeto
+		var AviaoF = function(){
+			this.cor = 'Azul'
+			this.modelo = 'Boing 787'
+			this.levantarVoo = function(){
+				console.log('Levantar voo')
+			} 
+		}
+
+		var aviao2 =  new AviaoF()
+
+		//-------------------------------------------------------
+
+		//Classe e modelo de objeto
+		class AviaoC {
+
+			constructor(){
+				this.cor='Vermelho'
+				this.modelo = 'Embraer E-Jets'
+			}
+
+			levantarVoo(){
+				console.log('Levantar Voo')
+			}
+
+		}
+
+		var aviao3 = new AviaoC()
+
+
+		//------------------------------------------------------
+		
+		console.log(aviao1)
+		console.log(aviao2)
+		console.log(aviao3)
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

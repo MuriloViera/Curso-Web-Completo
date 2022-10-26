@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+			
+			$(document).ready(function(){//Tudo que tiver aqui dntro vai ser executado dps do carregamento da página
+
+				$('#div1').html('<strong>Div alterada</strong>')
+
+				//html é o innerHtml do DOM, que retorna o codigo html que tiver dentro do elemento que eu escolhi
+
+				$('#div2').text('Testando o teste testado')
+
+				//text insere apenas texto dentro da tag html
+			})
+
+
+	</script>
+
+
+	<title>Recuperando e manipulando conteudo</title>
+
+</head>
+<body>
+
+	<div id="div1" style="border:solid 1px #000; width: 150px; height: 150px;">Div 1</div>
+
+	<div id="div2" style="border:solid 1px #000; width: 150px; height: 150px;">Div 2</div>
+
+</body>
+</html>

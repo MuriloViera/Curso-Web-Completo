@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seletores que selecionam elementos</title>
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<input class="exemplo1" type="text" placeholder="input1 ">
+	<input type="text" placeholder="input2 ">
+	<input type="text" placeholder="input3 ">
+
+	<div class="exemplo1">Div 1</div>
+	<div>Div 2</div>
+	<div>Div 3</div>
+
+
+	<ul class="lista1">
+		<li class="exemplo1">Opção 1</li>
+		<li class="exemplo2">Opção 2</li>
+		<li class="exemplo2">Opção 3</li>
+	</ul>
+
+	<ul class="lista2">
+		<li class="exemplo2">Opção 1</li>
+		<li class="exemplo2">Opção 2</li>
+		<li>Opção 3</li>
+	</ul>
+
+	<script type="text/javascript">
+		
+		//Combinação de seletores
+
+			//Selecionar elementos por classe de tag especifica
+
+			console.log($('li.exemplo1'))//Aqui, embora eu tenha mais elementos com a classe exemplo1, eu quero apenas um elemento, entao é so eu colocar ele antes da classe
+
+			//Selecionar elementos por classe de classe específica
+			console.log($('.lista1 .exemplo2'))
+
+			//Retorno dos elementos(:first, :last, :even e :odd)
+			//Se colocarmos para retornar um log, nos é retornado um array, aonde cada elemento selecionado tem um indice, com o :, eu escolho se quero que apareça somente o primeiro, ultimo, os impares ou pares de indice
+			console.log($('.exemplo1:first'))
+
+
+	</script>
+
+</body>
+</html>

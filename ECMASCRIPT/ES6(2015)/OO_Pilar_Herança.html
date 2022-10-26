@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pilar da Herança</title>
+
+	<script type="text/javascript">
+		
+
+		//MODELO DE OBJETO ANIMAL(MODELO PAI)
+		class Animal{
+			
+			//ATRIBUTOS
+			constructor(){
+				this.cor = ''
+				this.tamanho = null
+			}
+
+			//MÉTODOS
+			dormir(){
+				console.log('Dormir')
+			} 
+
+
+		}
+
+
+		//MODELO DE OBJETO CACHORRO(MODELO FILHO)
+		class Cachorro extends Animal{//Colocar extends significa que eu vou pegar os atributos e metodos de outra classe e adicionar a essa atual
+			
+			//ATRIBUTOS
+			constructor(){
+				super()//O super me permite o construtor da classe pai
+				this.orelhas = 'Grandes e caídas'
+			}
+
+			//MÉTODOS
+			correr(){
+				console.log('Correr')
+			}
+
+			rosnar(){
+				console.log('Rosnar')
+			}
+		}
+
+
+		//MODELO DE OBJETO PASSARO(MODELO FILHO)
+		class Passaro extends Animal{
+
+			//ATRIBUTOS
+			constructor(){
+				super()
+				this.bico = 'Curto'
+			}
+
+			//METODOS
+			voar(){
+				console.log('Voar')
+			}
+
+		}
+
+		//MODELO DE OBJETO PAPAGAIO
+		class Papagaio extends Passaro{//Aqui to pegando os atributos e metodos da classe passaro que pega os atributos e metodos da classe animal, e eu pego dos dois
+
+			//ATRIBUTOS
+			constructor(){
+				super()
+				this.sabeFalar = true
+			}
+
+			//MÉTODOS
+			falar(){
+				console.log('Falar')
+			}
+		}
+
+
+		var cachorro = new Cachorro()
+		var passaro = new Passaro()
+		var papagaio = new Papagaio()
+
+		cachorro.dormir()
+		passaro.dormir()
+		papagaio.falar()
+		papagaio.dormir()
+		papagaio.voar()
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

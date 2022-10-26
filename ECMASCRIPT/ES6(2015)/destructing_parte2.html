@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Operador Destructor 2</title>
+
+	<script type="text/javascript">
+
+		//OBJETO LITERAL
+		var produto = {
+			descricao: 'Notebook',
+			preco: 1800,
+			detalhes:{//Aqui to criando outro obejto a partir de um atributo de outro objeto
+				fabricante: 'abc',
+				modelo: 'xyz'
+			}
+		}
+
+		//Para usar o destructor em um objeto eu uso {} e nao [] como é em arrays
+		//var { descricao: d, preco: p } = produto
+
+		var { detalhes: {fabricante:F, modelo='Nao definido'} } = produto //Eu colocar o modelo='Nao definido', significa que se ele nao tiver valor, sendo assim undefined, ele vai receber "Nao definido", se nao, segue tudo normal
+
+
+		console.log(F, modelo)
+
+
+	
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

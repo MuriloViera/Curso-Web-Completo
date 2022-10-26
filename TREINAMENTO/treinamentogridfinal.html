@@ -1,0 +1,92 @@
+<!--https://www.youtube.com/watch?v=9zBsdzdE4sM-->
+
+<!--O final nao tem nenhuma coisa de expandir as areas nem nada-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Grid-Treinamento</title>
+
+	<!--Aqui eu vou aprender a usar GRID SEM bootstrap, que era o que deveria ter me sido ensinado primeiro-->
+
+	<style type="text/css">
+
+		#grid{
+			height: 100vh;
+			border: 1px solid red;
+			display: grid;
+			grid-template-columns:200px 250px ;
+			grid-auto-rows: 100px; 
+			grid-gap: 15px;
+			justify-content: center; /*Funciona igual o flexbox*/
+			align-content: center; /*Funciona igual o flexbox porem so uso o content, nao o itens*/
+			/*Se eu usar o item, ele vai mexer nos items dentro da grid*/
+		}
+
+		#grid-item{
+			padding-top: 25px;
+			text-align: center;
+			width: auto;
+			height: auto;
+			background: yellow;
+			border: 5px solid black;
+		}
+
+		.item1{
+			justify-self: center;
+		}
+
+		.item2{
+			align-self: center;
+		}
+
+		.item3{
+			
+		}
+
+		.item5{
+			
+		}
+
+		
+	</style>
+</head>
+<body>
+
+	<div id="grid">
+		
+		<div id="grid-item" class="item1">
+			Item 1
+		</div>
+
+		<div id="grid-item" class="item2">
+			Item 2
+		</div>
+
+		<div id="grid-item" class="item3">
+			Item 3
+		</div>
+
+		<div id="grid-item">
+			Item 4
+		</div>
+
+		<div id="grid-item" class="item5">
+			Item 5
+		</div>
+
+		<div id="grid-item" class="item6">
+			Item 6
+		</div>
+
+		<div id="grid-item" class="item7">
+			Item 7
+		</div>
+		
+	</div>
+
+</body>
+</html>

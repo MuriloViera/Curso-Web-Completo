@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Prototype Chain</title>
+
+	<script type="text/javascript">
+		
+		var animal = {
+			attr1 : 'a'
+		}	
+
+		var vertebrado = {
+			__proto__:animal,//Esse puxa o animal
+			attr2 : 'b'
+		}
+
+		var ave = {
+			__proto__:vertebrado,//Esse puxa o vertebrado
+			attr3 : 'c'
+		}
+
+		console.log(ave.attr2, ave.attr1)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

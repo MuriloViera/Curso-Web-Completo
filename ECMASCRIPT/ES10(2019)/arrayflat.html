@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Flat</title>
+
+	<script type="text/javascript">
+		
+		let array = [1,2,3,4,[5,6,7,8],10,[11,12,13,[14,15,16]]]//Array multidimensional
+
+		console.log(array)
+
+		//O método flat, trasnforma o array multidimensional em um array de uma dimensao só
+
+		let array2 = array.flat()
+
+		console.log(array2)
+
+		//O flat, ele eleva um array a um nivel, ou seja, se no meu array, tiver outro array, com OUTRO array dentro, ou seja, 3 niveis, entao se eu quiser que todos os arrays estejam no mesmo nivel, tenho que colocar dois flat
+
+		let array3 = array2.flat()
+
+		console.log(array3)
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Operador Destructing parte 3</title>
+
+	<script type="text/javascript">
+
+		var arr = [ 10, 20, 30, 40]
+
+		function teste([ a, b, , c]){//Uso aqui o destructor pra pegar o array que foi me passado ali em baixo
+			console.log(a, b, c)
+		}
+
+		teste(arr)
+
+
+		//Objeto literal
+		var obj = {
+			a: 10,
+			b: 20,
+			c: 30,
+			d: 40
+		}
+
+		function teste2({a, b}) {
+			console.log(a, b)
+		}
+
+		teste2(obj)
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

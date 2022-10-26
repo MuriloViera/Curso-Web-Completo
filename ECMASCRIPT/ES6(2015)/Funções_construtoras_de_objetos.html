@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Funções construtoras de objetos</title>
+
+	<script type="text/javascript">
+		
+		//Função construtora de objetos
+		var Carro = function(){
+			//Atributos
+			this.cor = 'Amarelo'
+			this.modelo = 'Onix'
+			this.velocidadeAtual = 0
+			this.velocidadeMaxima = 180
+
+			//Metodos
+			this.acelerar = function(){
+				var velocidade = this.getVelocidadeAtual() + 10
+				this.setVelocidadeAtual(velocidade)
+			}
+
+			//Getters e Setters
+			this.getVelocidadeAtual = function(){
+				return this.velocidadeAtual
+			}
+
+			this.setVelocidadeAtual = function(velocidadeAtual){
+				this.velocidadeAtual = velocidadeAtual
+			}
+		}
+
+		var Onix = new Carro()
+
+		console.log(`A velocidade atual é: ${Onix.getVelocidadeAtual()}`)
+		Onix.acelerar()
+		Onix.acelerar()
+		Onix.acelerar()
+		console.log(`A velocidade atual é: ${Onix.getVelocidadeAtual()}`)
+
+
+	</script>
+
+</head>
+<body>
+	<p>teu cu 2</p>
+
+</body>
+</html>

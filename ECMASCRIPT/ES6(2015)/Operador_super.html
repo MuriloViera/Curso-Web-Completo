@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pilar da Herança</title>
+
+	<script type="text/javascript">
+		
+
+		//MODELO DE OBJETO ANIMAL(MODELO PAI)
+		class Animal{
+			
+			//ATRIBUTOS
+			constructor(cor, tamanho, peso){
+				this.cor = cor
+				this.tamanho = tamanho
+				this.peso = peso
+			}
+
+			//MÉTODOS
+			dormir(){
+				console.log('Dormir')
+			} 
+
+
+		}
+
+		//MODELO DE OBJETO PASSARO(MODELO FILHO)
+		class Passaro extends Animal{
+
+			//ATRIBUTOS
+			constructor(bico, cor, tamanho, peso){
+				super(cor, tamanho, peso)
+				this.bico = bico
+			}
+
+			//METODOS
+			voar(){
+				console.log('Voar')
+			}
+
+		}
+
+		//MODELO DE OBJETO PAPAGAIO
+		class Papagaio extends Passaro{
+
+			//ATRIBUTOS
+			constructor(sabeFalar, cor, tamanho, peso){
+				super('Médio', cor, tamanho, peso)//aqui eu to acessando o construtor do pai (Passaro) e passando 'Médio' para ele
+				this.sabeFalar = sabeFalar
+			}
+
+			//MÉTODOS
+			falar(){
+				console.log('Falar')
+			}
+		}
+
+		var papagaio = new Papagaio(true, 'Verde', 25, 350)
+		console.log(papagaio)
+
+		var papagaio2 = new Papagaio(false, 'Vermelho', 10, 150)
+		console.log(papagaio2)
+
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

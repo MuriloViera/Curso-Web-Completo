@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Função Flecha</title>
+
+	<script type="text/javascript">
+		
+		/*//Criei uma variavel que tem como valor uma função
+		let quadrado = function(x){ 
+			return x*x
+		}
+		*/
+
+
+		/*//O nome vem por causa do =>
+		let quadrado = (x) => {
+			return x*x
+		}
+		*/
+
+
+		//Nao preciso usar parentese caso tenha + ou 1 parametro, se nao tiver nenhum ai tem que por
+		/*
+		let quadrado = x => {
+			return x*x
+		}
+		*/
+
+		//Return implicito, que é quando eu nao uso for, nem if, nem nada, so brinco com variaveis simples
+		/*
+		let quadrado = x => x * x
+		*/
+
+		/*
+		let ParOuImpar = function(numero){
+			if(numero % 2 === 0)//Lembrando que o % devolve o resto
+			{
+				//Par
+				return 'par'
+			}
+			else
+			{
+				//Impar
+				return 'impar'
+			}
+
+		}
+		*/
+
+		let ParOuImpar = numero => numero % 2 === 0 ? 'par' : 'impar'
+		//Se numero dividio resto por 2 dar 0 ele retorna par se for falso ele retorna impar
+			
+		document.write(ParOuImpar(155))
+
+	</script> 
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To String JavaScript</title>
+
+	<script type="text/javascript">
+		
+		class Carro{
+			constructor(marca, modelo, ano){
+				this.marca = marca,
+				this.modelo = modelo,
+				this.ano = ano
+			}
+
+			toString(){
+				return `Carro da marca ${this.marca}, modelo ${this.modelo}, ano ${this.ano}`
+			}
+		}
+
+		//O toString é um metodo que ja existe em todo objeto, que mostra quando voce o chama, qual o tipo do objeto, e é possivel reescreve-lo, como eu fiz agora
+
+		var carro = new Carro('Jeep', 'Renegade', '2021')
+
+		console.log(carro.toString())
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

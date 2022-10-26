@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Usando Classe Privada</title>
+
+	<script type="text/javascript">
+		class Pessoa {
+
+			//Atributo Privado
+			#humor = 0
+
+			#mensagens = Array('Seja Feliz', 'Não estou para conversa hoje')
+
+			//Atributos(Públicos)
+			constructor(nome){
+				this.nome = nome
+				this.#definirHumor()
+			}
+
+			//Metodos
+			dizerOi(){
+				return 'Olá, meu nome é: ' + this.nome
+			}
+
+
+			//Metodo Privado
+			#definirHumor(){
+				//0 e 1
+				this.#humor = Math.floor(Math.random() * 2)
+
+			}
+
+			//Para usar o atributo privado, eu tenho que criar o get, que retorna ele
+
+			getHumor(){
+				return this.#humor
+			}
+
+			getMensagens(){
+				return this.#mensagens[this.#humor]
+			}
+
+		}
+
+
+		var Murilo =  new Pessoa('Murilo')
+
+		console.log(Murilo.dizerOi())
+
+		console.log(Murilo.getMensagens())
+	</script>
+</head>
+<body>
+
+</body>
+</html>

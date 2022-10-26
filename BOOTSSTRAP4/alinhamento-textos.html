@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--OU caso eu nao tenha o arquivo baixado no pc posso pegar do site-->
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> O integritye e o crossorigin servem como medidas de segurança-->
+
+
+    <title>Bootstrap - Alinhamento de Textos</title>
+
+  </head>
+
+  <body style="margin-bottom: 200px; padding: 16px;">
+
+    <!--Paragrafo justificado, da espaçamento nas palavras e nao quebra palavras pelo meio quando acaba o espaço-->
+    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <br>
+    <br>
+
+    <!--
+      Alinhamento responsivo - 
+      class text-<tela>-<alinhamento>
+      tela: SM, MD, LG e XL
+      ALINHAMENTO:Left, Center, Right
+    -->
+
+    <p class="text-sm-right">tela &gt;=576px</p><!--Maior ou igual Small-->
+    <p class="text-md-right">tela &gt;=768px</p><!-- Maior ou igual Medium-->
+    <p class="text-lg-right">tela &gt;=992px</p><!--Maior ou igual Large-->
+    <p class="text-xl-right">tela &gt;=1200px</p><!--Maior ou igual Extra Large-->
+
+    <br>
+    <br>
+
+    <!--Converter Block para Inline-->
+    <h1 class="bg-success d-inline">Lorem ipsum dolor</h1><!--Background succes colocar uma cor de bg, o succes é a cor verde-->
+    <p class="bg-success d-inline">Lorem ipsum dolor sit amet, consectutu adipiscing elit.</p>
+
+    <br>
+    <br>
+
+    <!--Converter Inline para Block-->
+    <span class="bg-success d-block">Lorem ipsum dolor1</span>
+    <br>
+    <span class="bg-success d-block">Lorem ipsum dolor2</span>
+
+    <br>
+    <br>
+
+    <!--Converter para Inline-Block-->
+    <div class="bg-warning">
+      <h3 class="bg-success d-inline-block">Lorem ipsum</h3>
+      <h3 class="bg-success d-inline-block">Lorem ipsum</h3>
+    </div>
+    
+
+
+
+
+    <!-------------------------------- Optional JavaScript --------------------------------------------->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script> 
+
+    <!--Ou <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> SE eu for pegar do site-->
+
+  </body>
+
+</html>

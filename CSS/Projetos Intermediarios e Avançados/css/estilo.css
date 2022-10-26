@@ -1,0 +1,51 @@
+/*Seletor Universal
+
+*{
+	border: 1px solid red;
+}
+*/
+
+/*Seletor de texto
+h1{
+	color: green;
+}
+*/
+
+
+/*Seletor de classe*/
+.verde{
+	color:green;
+}
+
+p.verde{ /*Aqui to definindo uma classe que so pode ser usada em um parentese*/
+	color: green;
+	margin:0px;
+}
+
+/*Seletor de ID*/
+#cabecalho{
+	border: 1px solid blue;
+}
+
+
+/*Seletor de filho*/
+li>a { /*Aqui eu aplico essa formatação aos a diretamente dentro do li*/
+	color: red;
+	text-decoration: none;
+
+}
+
+/*Seletor de descendente*/
+div a{ /*Aqui eu seleciono todos os a dentro de uma div INDEPENDENTE DO QUE TIVER ENTRE ELES*/
+	color: green;
+}
+
+/*Seletor de irmão adjacente*/
+h1+p{ /*Seleciono o p MAIS PERTO de h1*/
+	color: red;
+}
+
+/*Seletor de irmão geral*/
+h1~p{/*Seleciono outro p MAIS perto de um p perto de um h1*/
+	color: pink;
+}

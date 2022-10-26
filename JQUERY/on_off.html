@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>On e Off</title>
+
+	<style type="text/css">
+		
+		.desfocado{
+			background-color: white;
+		}
+
+		.focado{
+			background-color: green;
+		}
+	</style>
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//O on é um universal para eu adicionar qualquer evento que quiser, depois de colocar o evento, eu posso colocar quais elementos filhos eu quero afetar tambem
+			$('body').on('focus', 'input' , function(e){
+				$(e.target).removeClass('desfocado').addClass('focado')
+			})
+
+			$('body').on('blur', 'input' ,function(e){
+				$(e.target).removeClass('focado').addClass('desfocado')
+			})
+
+			$('body').append('<br> <br> <input type="text" class="desfocado">')
+
+			//O off funciona da mesma forma, so que para remover eventos
+
+		})
+		
+	</script>
+
+</head>
+<body>
+
+	<input type="text" class="desfocado" name="">
+
+</body>
+</html>

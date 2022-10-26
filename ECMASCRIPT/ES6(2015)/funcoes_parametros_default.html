@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Funcoes parametros</title>
+
+	<script type="text/javascript">
+
+		//eu declarar o que as variaveis valem dentro da propria passação de parametros da função, significa que eles vao ser default, ou seja, se alguem chamar essa função sem passar os parametros, ele vai pegar esses defaults
+		function contarUmaHistoria(personagem = 'Fubá', atividade ='Correr no parque', nome_dono = 'Joao'){
+			document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono}, e eles viveram felizes para sempre`)
+		}
+
+		contarUmaHistoria(undefined, 'Enterrar ossos', 'Pedro')
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

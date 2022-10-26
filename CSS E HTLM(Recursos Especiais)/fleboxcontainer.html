@@ -1,0 +1,130 @@
+<!--https://flexboxfroggy.com-->
+
+<!--https://caniuse.com/?search=flexbox-->
+
+<!--https://autoprefixer.github.io-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<style type="text/css">
+
+		#conteudo{
+			background: #dcdcdc;
+			height: 600px;
+			display: flex;
+
+			/*
+			row|row-reverse|column|column-reverse
+			
+			flex-direction: row;
+			*/
+
+			
+			/*
+			no-wrap|wrap|wrap-reverse
+			
+			flex-wrap:nowrap; ->O nowrap faz com que os itens sejam comprimidos para caberem no conteudo,
+			pois o conteudo tem uma largura de 300px e os 4 itens somados, dariam 400px de largura, ja o wrap,
+			ele deixa dentro do container conteudo se eles caberem la, se nao ele tira
+			*/
+
+
+			/*
+			Justify-content alinha HORIZONTALMENTE se for uma ROW, e VERTICALMENTE se for uma COLUMN(no caso, falo
+			usando o flex-end e o flex-start)
+
+			justify-content: space-between;
+			*/
+
+
+			/*
+			O align-items alinha VERTICALMENTE se for uma ROW, e HORIZONTALMENTE se for uma COLUMN*(no caso, falo
+			usando o flex-end e o flex-start)
+
+			align-items: flex-start ;
+			*/
+			
+
+			/****POSSO USAR O JUSTIFY E O ALIGN PARA FAZER ELES SE MOVEREM NA HORIZONTAL,VER JOGUINHO DOS SAPO*****/
+
+		}
+
+		.item{
+			width: 200px;
+			height: 100px;
+			margin: 10px;
+			background: white;
+			border: 1px solid gray;
+
+			/*Define a proporção de espaço ocupado por um item*/
+			flex-grow: 0;
+
+			/*Define a capacidade de redução de tamanho de  um item*/
+			flex-shrink: 1;
+
+			/*Indica o tamanho inicial dos itens flex antes da distribuição deles, o flex-basis é basicamente uma width*/
+			flex-basis: auto;
+		}
+
+
+		.item1{
+			/*flex-grow: 1;*/
+			/*flex-shrink: 1;*/
+		}
+
+		.item2{
+			/*flex-shrink: 2;*/
+			/*flex-grow: 2;*/
+		}
+
+		.item3{
+			/*flex-shrink: 5;*/
+			/*flex-grow: 3;*/
+		}
+
+		/*
+		.ordem1{
+			order: 1;
+		}
+
+		.ordem2{
+			order: 2;
+		}
+
+		.ordem3{
+			order: 3;
+		}
+
+		.ordem4{
+			order: 4;
+		}
+		*/
+
+	</style>
+
+	<title>
+		
+	</title>
+	
+	
+</head>
+
+<body>
+
+	<h1>Flexbox</h1>
+	<div id="conteudo">
+		<div class="item item1">01</div>
+		<div class="item item2">02</div>
+		<div class="item item3">03</div>
+		<div class="item">04</div>
+	</div>
+
+</body>
+
+</html>

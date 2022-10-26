@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object From Entries</title>
+
+	<script type="text/javascript">
+		//O object from entries, faz o oposto, ele pega um array, e cria um objeto
+
+		//Se eu quiser que isso aconteça, o array tem que ter esse formato
+		let dados = [
+			['nome', 'Murilo'],
+			['profissional' ,[
+				['site' , 'murilo.net.br'],
+				['profissao' , 'programador'],
+			]],
+			['hobbies', ['caminhar' , 'nadar']],
+			['pais', 'Brasil']
+
+		]
+
+		console.log(Object.fromEntries(dados))
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

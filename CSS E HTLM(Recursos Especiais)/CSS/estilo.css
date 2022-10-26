@@ -1,0 +1,36 @@
+/*
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 10px;
+	margin: 10px;
+	-moz-border-radius: 20px 90px;
+	-webkit-border-radius: 20px 90px;
+	border-radius: 20px 90px; ->Se eu arredondar muito, ele arredonda tanto que vira uma bola, alguns browsers com versoes
+	mais antigas precisam de um prefixo antes do border ratius, o mozila por exemplo, usa o -moz-, ja o chrome, usa o -webkit-
+}
+*/
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*Aqui nesse caso, a largura da caixa será de 400, pois ele terá 300, e quando aplico o padding, ele aumenta a largura,
+	ou seja, ele ganha 50px de um lado, e 50px do outro, fazendo asism, com que a caixa tenha 400px de largura. Mas, se eu aplicar
+	o box-sizing: border-box, minha caixa passa a ter 300px e nada que eu colocar, faz ela mudar de tamanho*/
+}
+
+#caixa2{
+	width: 300px;
+	height: 300px;
+	background: blue;
+}
+
+.arredondamento{
+	border-radius: 150px;
+}

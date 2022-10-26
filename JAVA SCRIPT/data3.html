@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>JavaScript</title>
+	<script>
+		
+		//15/01/2017
+		var data1 = new Date(2017, 0, 15)
+
+		//23/02/2017
+		var data2 = new Date(2017, 1, 23)
+
+		document.write(data1.toString())
+		document.write('<hr />')
+		document.write(data2.toString())
+
+		document.write('<br /><br /><hr />')
+		//converter as datas para algo que possamos calcular
+		document.write(data1.getTime())
+		document.write('<hr />')
+		document.write(data2.getTime())
+
+		//Get time pega todos os milisegundos desde 1 de Janeiro de 1970
+
+		document.write('<br /><br /><hr />')
+
+		//Encontrar a quantidade de milissegundos entre data1 e data2
+		var milissegundos=Math.abs(data1.getTime()-data2.getTime())
+		document.write(milissegundos)//Math.abs é tipo colocar um vlor em modulo
+
+		document.write('<br /><br /><hr />')
+		//1 dia tem 24h, cada hora tem 60 min e cada minuto 60 sec e cada sec tem 1000 milissegundos
+		var milissegundos_por_dia = (1*24*60*60*1000)
+		document.write('1 dia tem: ' + milissegundos_por_dia + ' milissegundos')
+
+		document.write('<br /><br /><hr />')
+		document.write('A diferença entre data1 e data2 é: ' + Math.ceil(milissegundos/milissegundos_por_dia))
+		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

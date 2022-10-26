@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Meu App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+<ion-text>
+  Olá, bem vindo ao seu primeiro aplicativo mobile com IONIC, para acessar as outras páginas, use os botoes abaixo, ou
+  simplesmente altere o fim da URL para alguma das opções a seguir: botoes, cartoes, entradados, grid, lista.
+
+  <h1>NAVEGAÇÃO</h1>
+
+  <!--No href eu poderia escrever o URL completo sem o [], o routerDirection faz ter uma animaçãozinha-->
+  <ion-button color="success" [href]="'/botoes'" routerDirection="foward">Botões</ion-button>
+  <ion-button color="danger" [href]="'/cartoes'" routerDirection="foward">Cartões</ion-button>
+  <ion-button color="warning" [href]="'/entradados'" routerDirection="foward">Entrada de Dados</ion-button>
+  <ion-button color="light" [href]="'/grid'" routerDirection="foward">Grid</ion-button>
+  <ion-button color="dark" [href]="'/lista'"routerDirection="foward">Lista</ion-button>
+  <ion-button color="primary" [href]="'/databinding'"routerDirection="foward">Databinding</ion-button>
+  <ion-button color="secondary" [href]="'/modelos'"routerDirection="foward">Modelos</ion-button>
+  <ion-button color="secondary" [href]="'/appfinal'"routerDirection="foward">Aplicativo Final</ion-button>
+
+</ion-text>
+
+</ion-content>
+

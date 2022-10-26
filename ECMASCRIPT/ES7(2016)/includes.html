@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Include Arrays</title>
+
+	<script type="text/javascript">
+		let array = ['banana', 'maça', 'uva']
+
+		//Existe um determinado elemento
+
+		//O find retorna o elemento se o elemento que eu pesquisei, e undefined se nao existir
+		let retorno = array.find((iten) =>
+			iten == 'maça'
+		)
+
+		console.log(retorno)
+
+		//O include retorna true or false
+		let retorno2 = array.includes('maça')
+
+		console.log(retorno2)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
