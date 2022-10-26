@@ -1,6 +1,11 @@
-# Curso de Desenvolvimento Web Completo 2022
+<h1 align='center'>Curso de Desenvolvimnto Web Completo 2022</h1>
 
-## Este curso foi feito pela UDEMY com certificação pelos professores que criaram o curso, o mesmo contempla várias áreas de desenvolvimento Web, com enfoque em linguagens de programção distintas, frameworks e outras ferramentas.
+<p align="center">
+<img src="https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white"/>
+<img src="https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important"/>
+</p>
+
+## Este curso foi feito pela UDEMY com certificação pelos professores que criaram o curso, o mesmo contempla várias áreas de desenvolvimento Web, com enfoque em linguagens de programação distintas, frameworks e outras ferramentas. Link do curso: https://www.udemy.com/course/web-completo/
 
 ### O mesmo engloba 20 ou mais projetos(sites completos) que vão evoluindo de acordo com a progreção do curso, assim, a ordem de aprendizado do curso foi:
 >![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white): Essa pasta engloba apenas arquivos .html que são arquivos de aprendizado da linguagem, esta seção possui apenas um projeto que é:
@@ -48,7 +53,7 @@
 
 <br/>
 
->![PHP](https://img.shields.io/badge/php-%23777BB4.svg?logo=php&logoColor=white): Esta pasta contem os arquivos de estudo referente a PHP, ou seja, arquivos .php junto dos essenciais ja vistos antes. IMPORTANTE: Foi necessário utilizar o software XAMPP para iniciar um servidor Apache e rodar os codigos php la dentro, ou seja, essa pasta deveria estar dentro do htdocs do XAMPP para que os arquivos funcionem devidamente. Dentro desta pasta, existe tambem a pasta AJAX, que também precisa ser executado com o XAMPP, deste modo temos os projetos de PHP:
+>![PHP](https://img.shields.io/badge/php-%23777BB4.svg?logo=php&logoColor=white): Esta pasta contem os arquivos de estudo referente a PHP, ou seja, arquivos .php junto dos essenciais ja vistos antes. IMPORTANTE: Foi necessário utilizar o software ![XAMPP](https://img.shields.io/badge/XAMPP-F16822?logo=xampp&logoColor=white) para iniciar um servidor Apache e rodar os codigos php la dentro, ou seja, essa pasta deveria estar dentro do htdocs do XAMPP para que os arquivos funcionem devidamente. Dentro desta pasta, existe tambem a pasta AJAX, que também precisa ser executado com o XAMPP, deste modo temos os projetos de PHP:
 >> Projeto Help Desk: Um aplicativo de chamados, aonde pode-se registrá-los e visualizá-los.
 >
 >> Projeto Lista Tarefas: Um projeto de listagem e checacgem de tarefas.
@@ -57,11 +62,17 @@
 
 <br/>
 
-> **AJAX**: Esta pasta contem arquivos .php, .xml, .html, .css e .js que foram utilizados para aprender sobre essa metodologia com base em requisições sincronas e assincronas. Para executar os arquivos aqui é necessário o servidor apache do XAMPP, e dentro dessa pasta existe somente um projeto:
+>![CSS3](https://img.shields.io/badge/AJAX-%23FFFFFF.svg?logo=kashflow&logoColor=blue): Esta pasta contem arquivos .php, .xml, .html, .css e .js que foram utilizados para aprender sobre essa metodologia com base em requisições sincronas e assincronas. Para executar os arquivos aqui é necessário o servidor apache do XAMPP, e dentro dessa pasta existe somente um projeto:
 >> Projeto Pesquisa Endereço: Projeto de site completo que utiliza requisições para usufruir de uma API que retorna os dados de endereço a partir de seu CEP.
 
-> **JQUERY**: Esta seção contem arquivos .html com codigos js e css imbutidos que inclui a biblioteca do Javascript JQuery, esses arquivos foram criados apenas para aprendizado da biblioteca.
+<br/>
 
-> **SASS**: Seção ainda em aprendizado.
+>![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?logo=jquery&logoColor=white): Esta seção contem arquivos .html com codigos js e css imbutidos que inclui a biblioteca do Javascript JQuery, esses arquivos foram criados apenas para aprendizado da biblioteca.
 
-> **IONIC**: Esta seção contem um Aplicativo Mobile utilizando o framework Ionic com Angular.
+<br/>
+
+>![SASS](https://img.shields.io/badge/SASS-hotpink.svg?logo=SASS&logoColor=white): Seção ainda em aprendizado.
+
+<br/>
+
+>![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?logo=Ionic&logoColor=white): Esta seção contem um Aplicativo Mobile utilizando o framework Ionic com Angular.
